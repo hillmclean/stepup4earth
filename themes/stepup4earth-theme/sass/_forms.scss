@@ -1,0 +1,57 @@
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+/* Buttons */
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	background-color: $color__green-1;
+	line-height: 1;
+	padding: .6rem 1rem .4rem;
+}
+
+/* Fields */
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+textarea,
+select {
+	border: none;
+	color: $color__text-main;
+	border-bottom: .1rem solid #303030;
+	width: 100%;
+	line-height: 1;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+	padding: .4rem;
+}
+
+textarea,
+select {
+	border: .05rem solid #808080;
+}
+
+textarea {
+    padding: .4rem;
+}
+
+select {
+    padding: .4rem .4rem .3rem;
+    background-color: #FFF;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -ms-appearance: none; 
+}

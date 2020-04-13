@@ -1,0 +1,38 @@
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+
+.widget {
+	margin: 0 0 $base__space-unit;
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+}
+
+/* Search widget. */
+.widget_search .search-submit {
+	display: none;
+}
+
+.cta-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: 50px;
+	background: $color__green-1;
+	margin-bottom: 4rem;
+}
+
+.cta-text {
+	color: $color__background-white;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	p {
+		margin: 0px;
+	}
+}
+

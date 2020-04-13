@@ -1,0 +1,46 @@
+# COMMUNITY PROJECT GITIGNORE #
+# Ignore OS files #
+# =============== #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+*[Tt]humbs.db
+*.Trashes
+# Ignore logs and databases #
+# ========================= #
+*.log
+*.sql
+error_log
+access_log
+# Ignore everything in "wp-content" except the "plugins" and "themes" directories. #
+# ================================================================================ #
+/*
+!.gitignore
+!plugins/
+!themes/
+!README.md
+# Ignore everything in "plugins" except certain plugins. #
+# ========================================================== #
+plugins/*
+!plugins/ecofair-functionality/
+!plugins/stepup4earth-workshops/
+!plugins/stepup4earth-community/
+!plugins/contact-info-widget/
+!plugins/event-feature-widget/
+!plugins/social-info-widget/
+!plugins/ecofair-sponsors/
+!plugins/contact-form-7/
+# Ignore everything in "themes" except the active theme. #
+# ====================================================== #
+themes/*
+!themes/stepup4earth-theme/
+# Ignore npm packages #
+# =================== #
+themes/stepup4earth-theme/node_modules/*
+# Ignore build files #
+# ================== #
+themes/stepup4earth-theme/gulpfile.js
+themes/stepup4earth-theme/build/*

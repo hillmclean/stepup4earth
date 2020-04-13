@@ -1,0 +1,790 @@
+.page-about {
+ 
+  .about-box {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 43.7rem;
+    background-color: $color__background-grey;
+    margin-top: 15.3rem;
+    @include desktop {
+      position: absolute;
+      z-index: 0;
+      width: 100%;
+      height: 50rem;
+      background-color: $color__background-grey;
+      margin-top: 0rem;
+      top: 520px;
+    }
+  }
+  
+  .entry-header {
+
+    .entry-header-desktop {
+      display: none;
+    }
+    .entry-header-mobile { 
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      display: flex;
+
+      .title-content {
+        display: flex;
+        align-self: center;
+        padding-right: 0.625rem;
+        padding-left: 0.625rem;
+        width: 12.5rem;
+        h4 {
+          padding-right: 0.3125rem;
+          padding-bottom: 0.5rem;
+          border-bottom: 0.1875rem solid #00b46e;
+        }
+
+      }
+      .top-image-2 {
+        padding-right: 0.5rem;
+      }
+      
+    }
+
+    @include desktop {
+      .entry-header-mobile {
+        display: none;
+      }
+      .entry-header-desktop {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(20, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        max-width: 1920px;
+        padding-bottom: 0rem;
+        margin: 0 auto;
+        z-index: 2;
+        height: 1000px;
+        position: relative;
+
+        .our-mission-dkp {
+          position: relative;
+          z-index: 2;
+          width: 95%;
+          text-align: center;
+          margin: 0 auto;
+          grid-row: 2 / 3; 
+          grid-column: 10 / 16;
+          font-size: 1.125rem;
+          h2{
+            padding-bottom: 1.25rem;
+            font-size: 2rem;
+            border-bottom: 0.1875rem solid #00b46e;
+          }
+        }
+        .top-image1 {
+          background-image: url(../assets/images/wavedesktop1.png);
+          background-size: cover;
+          background-position: right;
+          grid-row: 1 / 4; 
+          grid-column: 1 / 4;
+          width: 100%;
+        }
+        .top-image2 {
+          grid-row: 1 / 4; 
+          grid-column: 4 / 10;
+          width: 100%;
+          background-image: url(../assets/images/wavedesktop2.png);
+          background-size: cover;
+          background-position: right;
+
+        }
+        .top-image3 {
+          background-image: url(../assets/images/wavedesktop3.png);
+          background-size: cover;
+          background-position: right;
+          grid-row: 1 / 4; 
+          grid-column: 16 / 18;
+          width: 100%;
+
+        }
+        .top-image4 {
+          background-image: url(../assets/images/wavedesktop4.png);
+          background-size: cover;
+          background-position: right;
+          grid-row: 1 / 4; 
+          grid-column: 18 / 21;
+          width: 100%;
+
+        }
+      }
+    } 
+  }  
+
+  .our-mission {
+    position: relative;
+    z-index: 2;
+    text-align: start;
+    margin: 0 auto;
+    padding-left: 0.5rem;
+    padding-right: 0.4375rem;
+    h2{
+      padding-bottom: 1.25rem;
+      font-size: 1.25rem;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+
+  .our-values {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 2rem 0rem 1rem 0rem;
+    width: 100%;
+    h5 {
+      margin-block-start: .7rem;
+      @include desktop {
+        padding-top: 2rem;
+      }
+    }
+
+    .values-title {
+      padding-bottom: 3.4375rem;
+      h2 {
+        font-size: 1.5rem;
+        @include desktop {
+          width: 100%;
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .icons {
+      .graph-icon {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding-bottom: 2.1875rem;
+        .graph-box {
+          position: absolute;
+          z-index: -1;
+          width: 5.4rem;
+          height: 5.4rem;
+          background-color:  #d9eee6;
+          margin-left: 3.5rem;    
+          margin-top: -2rem;    
+        }
+        .graph {
+          width: 6.25rem;
+          @include desktop {
+            width: 100%;
+          }
+        }
+      }
+
+      .books-icon {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding-bottom: 2.1875rem;
+        .books-box {
+          position: absolute;
+          z-index: -1;
+          width: 5.4rem;
+          height: 5.4rem;
+          background-color:  #d9eee6;
+          margin-left: 4.2rem;    
+          margin-top: 3rem;    
+        
+        }
+        .books {
+          width: 6.25rem;
+          @include desktop {
+            width: 100%;
+          }
+        }
+      }
+
+      .unity-icon {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding-bottom: 2.1875rem;
+        .unity-box {
+          position: absolute;
+          z-index: -1;
+          width: 5.4rem;
+          height: 5.4rem;
+          background-color:  #d9eee6;
+          margin-left: -2.42rem;    
+          margin-top: 3rem;    
+        
+        }
+        .unity {
+          width: 6.25rem;
+          @include desktop {
+            width: 55%;
+          }
+        }
+      }
+      @include desktop {
+        display: flex;
+        width: 90%;
+        justify-content: space-around;
+        align-items: flex-end;
+        padding-bottom: 2rem;
+
+      }
+    }
+  }  
+
+  .buttons {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    .button-box {
+      display: none;
+      @include desktop {
+        display: inline;
+        position: absolute;
+        z-index: -1;
+        width: 31rem;
+        height: 8.8rem;
+        background-color:  #d9eee6;
+        margin-top: -2rem;
+      }
+    }
+    .volunteer-button-about {
+    background-color: $color__green-1;
+    text-align: center;
+    padding: .4rem;
+    margin: $base__space-unit;
+    .volunteer-button-text-about {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $color__background-white;;
+      p {
+        margin: 0rem;
+      }
+    }
+    @include desktop {
+      display: flex;
+      width: 20%;
+      justify-content: space-around;
+
+    }
+   }
+
+
+    .donate-button-about {
+    border: solid $color__green-1 .15rem;
+    text-align: center;
+    padding: .4rem;
+    margin: $base__space-unit;
+    .donate-button-text-about {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $color__green-1;
+      p {
+      margin: 0rem;
+      }
+    }
+    @include desktop {
+      display: flex;
+      width: 20%;
+      justify-content: space-around;
+
+    }
+   }
+   @include desktop {
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+
+   }
+  }
+
+  .founders {
+    padding-top: 3.5rem;
+    padding-bottom: 1rem;
+    background-color: $color__background-grey;
+    position: relative;
+    z-index: 0;
+    
+    p {
+      position: relative;
+      z-index: 2;
+      margin-block-end: 0rem;
+    }
+    // Founder 1 Mobile//////////////
+    .mobile-desktop {
+        
+      .founder1-desktop {
+        display: none;
+      }
+
+      .founder1-mobile {
+        padding-right: 1rem;
+        padding-bottom: 2rem;
+      
+        .founder1-box1 {
+          background-color: #00b46e;
+          padding: .3rem 1.6em .2rem 0rem;
+          margin-left: 11.4rem;
+        }
+        .image-name {
+          display: flex;
+          width: 100%;
+          height: auto;
+          justify-content: space-between;
+
+          .image {
+            padding-left: 1rem;
+            position: relative;
+            z-index: 2;
+            width: 50%;
+          }
+          h5 {
+            position: relative;
+            z-index: 2;
+            width: 42%;
+            align-self: center;
+            padding-left: 0.5rem;
+            padding-bottom: 4rem;
+
+            .founder1-nameline {
+              position: absolute;
+              z-index: 2;
+              background-color: #00b46e;
+              width: 10rem;
+              height: .2rem;
+              margin-top: 3.5rem;
+              margin-left: -6rem;
+            }
+          }
+          .founder1-box2 {
+            position: absolute;
+            z-index: -1;
+            background-color: #d9eee6;
+            width: 100%;
+            height: 13rem;
+            margin-top: 3rem;
+            margin-right:9rem;
+          }
+        }
+        .content {
+          padding-left: 1rem;
+          padding-left: 1rem;
+  
+          .founder1-box3 {
+            position: absolute;
+            z-index: -1;
+            width: 2.1rem;
+            height: 3.6rem;
+            background-color: #00b46e;
+            margin-top: 17rem;
+            margin-left: 20.3rem;
+        
+          }
+        }
+      }
+      // Founder 1 Desktop////////////
+      @include desktop {
+        .founder1-mobile {
+          display: none;
+        }
+        .founder1-desktop {
+          display: flex;
+          padding-right: 1rem;
+          padding-left: 6rem;
+          padding-bottom: 6rem;
+          padding-top: 4rem;
+        }
+        .founder1-box1 {
+          position: relative;
+          z-index: 2;
+          margin-left: 4rem;
+          background-color: #88d8b9;
+          width: 4rem;
+          height: 4rem;
+          margin-top: -4.5rem;
+          
+        }
+        .image-content {
+          display: flex;
+          width: 100%;
+          height: auto;
+          .image {
+            position: relative;
+            z-index: 2;
+            width: 26rem;
+            height: auto;
+            padding-left: 1rem;
+          }
+          .founder1-box2 {
+            position: absolute;
+            z-index: -1;
+            background-color: #d9eee6;
+            width: 90%;
+            height: 32rem;
+            margin-top: 4rem;
+            margin-left: 4rem;
+            left: 10px; 
+
+          }
+        
+          .content {
+            width: 50%;
+            padding-top: 2rem;
+            h5 {
+              position: relative;
+              z-index: 2;
+              width: 100%;
+              align-self: center;
+              padding-left: 0.5rem;
+              font-size: 48px;
+
+              .founder1-nameline {
+                position: absolute;
+                z-index: 2;
+                background-color: #00b46e;
+                width: 22rem;
+                height: .4rem;
+                left: -50px;
+            
+              }
+            }
+            p {
+              width: 80%;
+              padding-left: 6rem;
+              font-size: 18px;
+            }
+            .founder1-box3 {
+              position: absolute;
+              z-index: -1;
+              width: 9rem;
+              height: 8.6rem;
+              background-color: #88d8b9;
+              margin-top: 17rem;
+              margin-left: -5rem;
+            }
+          }
+        }
+      }
+    }
+    // Founder 2 Mobile//////////////
+    .mobile-desktop{
+
+      .founder2-desktop {
+        display: none;
+      }
+      
+      .founder2-mobile {
+        padding-bottom: 4rem;
+        
+        .founder2-box1 {
+          position: absolute;
+          z-index: 1;
+          background-color: #c4da76;
+          width: 3.7rem;
+          height: 3.7rem;
+          margin-left: 9.5rem;
+          margin-top: .4rem;
+        }
+        .image-name {
+          display: flex;
+          width: 100%;
+          height: auto;
+          padding-right: 1rem;
+          justify-content: space-between;
+          .image {
+            padding-top: 2rem;
+            position: relative;
+            z-index: 0;
+            width: 50%;
+          }
+          h5 {
+            width: 40%;
+            align-self: center;
+            padding-left: 1rem;
+            .founder2-nameline {
+              position: absolute;
+              z-index: 2;
+              background-color: #c4da76;
+              width: 8rem;
+              height: .2rem;
+              margin-top: 2rem;
+              margin-left: 3.6rem;
+            }
+          }
+        }
+        .content {
+          p {
+            padding-left: 1rem;
+            position: relative;
+            z-index: 2;
+            .founder2-box2 {
+              position: absolute;
+              z-index: -1;
+              background-color: #c4da76;
+              width: 1.5rem;
+              height: 3rem;
+              margin-right: -3rem;
+              
+            }
+          }
+        }
+      }
+      // Founder 2 Desktop//////////////
+      @include desktop {
+        .founder2-mobile {
+          display: none;
+        }
+        .founder2-desktop {
+          display: flex;
+          padding-bottom: 6rem;
+          
+          .founder2-box1 {
+            position: absolute;
+            z-index: 1;
+            background-color: #c4da76;
+            width: 7rem;
+            height: 6.9rem;
+            margin-left: 23.5rem;
+            margin-top: -3rem;
+        
+          }
+          .content-image {
+            display: flex;
+            width: 100%;
+            height: auto;
+            .content {
+              width: 55%;
+              height: 100%;
+              padding-top: 6rem;
+
+              h5 {
+                text-align: right;
+                width: 90%;
+                font-size: 48px;
+              }
+            
+
+              p {
+                text-align: end;
+                width: 90%;
+                padding-left: 16rem;
+                position: relative;
+                z-index: 2;
+                font-size: 18px;
+              }
+              .founder2-box4 {
+                position: absolute;
+                z-index: 1;
+                background-color: #c4da76;
+                width: 4rem;
+                height: 3.9rem;
+                margin-left: 4rem;
+                margin-top: -15rem;
+              }
+              .founder2-box2 {
+                position: absolute;
+                z-index: -1;
+                background-color: #c4da76;
+                width: 3.3rem;
+                height: 8rem;
+                margin-right: -3rem;
+                margin-top: -11rem;
+                
+              }
+
+            }
+    
+            .image {
+              position: relative;
+              z-index: 0;
+              width: 26rem;
+              height: auto;
+              padding-top: 2rem;
+            }
+            .founder2-nameline {
+              position: absolute;
+              z-index: 2;
+              background-color: #c4da76;
+              width: 23rem;
+              height: .4rem;
+              left: -300px;
+              top: 250px;
+            }
+            .founder2-box3 {
+              position: absolute;
+              z-index: -2;
+              background-color: #ebebeb;
+              width: 100%;
+              height: 32rem;
+              margin-top: 4rem;
+  
+            }
+
+          }
+        }
+      }
+    }
+    // Founder 3 Mobile//////////////
+    .mobile-desktop {
+      .founder3-desktop{
+        display: none;
+      }
+      .founder3-mobile {
+        padding-bottom: 4rem;
+        .founder3-box1 {
+          position: absolute;
+          z-index: 3;
+          background-color: $color__cyan-4;
+          width: 3.7rem;
+          height: 3.7rem;
+          margin-left: 10rem;
+          margin-top: -1.5rem;
+        }
+        .image-name {
+          display: flex;
+          width: 100%;
+          height: auto;
+          justify-content: space-between;
+          
+          .image {
+            padding-left: 1rem;
+            position: relative;
+            z-index: 2;
+            width: 50%;
+          }
+          h5 {
+            width: 40%;
+            align-self: center;
+            background-color: #d3ebe2;
+            .founder3-nameline {
+              position: absolute;
+              z-index: 2;
+              background-color: $color__cyan-4;
+              width: 10rem;
+              height: 0.2rem;
+              margin-top: 3.5rem;
+              margin-left: -6rem;
+            }
+          }
+          .founder3-box2 {
+            position: absolute;
+            z-index: -1;
+            background-color: #d3ebe2;
+            width: 100%;
+            height: 18.6rem;
+            margin-right: 9rem;
+            margin-top: 6rem;
+          }
+        }
+        .content {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          p {
+            .founder3-box3 {
+              position: absolute;
+              z-index: -3;
+              background-color: #d3ebe2;
+              width: 100%;
+              height: 6rem;
+              margin-right: 9rem;
+              margin-left: 0rem;
+            
+            }
+        
+          }
+        }
+      }
+      // Founder 3 Desktop//////////////
+      @include desktop {
+        .founder3-mobile {
+          display: none;
+        }
+        .founder3-desktop {
+          display: flex;
+          padding-right: 1rem;
+          padding-left: 14rem;
+          padding-bottom: 8rem;
+          padding-top: 4rem;
+          .founder3-box1 {
+            position: absolute;
+            z-index: 2;
+            background-color: #2ad8cc;
+            width: 3.7rem;
+            height: 4rem;
+            margin-left: -0.8rem;
+            margin-top: -1.8rem;
+          }
+          .image-content {
+            display: flex;
+            width: 100%;
+            height: auto;
+
+            .image {
+              position: relative;
+              z-index: 2;
+              width: 26rem;
+              height: auto;
+              padding-left: 1rem;
+            }
+
+          }
+          .founder3-box2 {
+            position: absolute;
+            z-index: -1;
+            background-color: $color__cyan-4;
+            width: 5rem;
+            height: 5rem;
+            margin-left: 27rem;
+            margin-top: 12rem
+          }
+          .content {
+            width: 55%;
+            padding-top: 3rem;
+            h5 {
+              width: 100%;
+              align-self: center;
+              padding-left: 0.5rem;
+              font-size: 48px;
+              .founder3-nameline {
+                position: absolute;
+                z-index: 2;
+                background-color: $color__cyan-4;
+                width: 20rem;
+                height: .4rem;
+                margin-top: 4.5rem;
+                margin-left: -30rem;
+              }
+            }
+            p {
+              width: 80%;
+              padding-left: 6rem;
+              font-size: 18px;
+              .founder3-box3 {
+                position: absolute;
+                z-index: -3;
+                background-color: $color__cyan-4;
+                width: 5rem;
+                height: 5rem;
+                margin-left: -1rem;
+                margin-top: 25rem;
+              
+              }
+          
+            }
+          }
+        }
+      }
+    }
+
+  }
+  
+}

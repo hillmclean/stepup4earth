@@ -1,0 +1,108 @@
+.site-header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color: $color__background-white;
+    top: 0;
+    @include desktop {
+	position: fixed;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+    }
+    .site-branding {
+	display: flex;
+	align-items: center;
+	padding: 1rem 1.4rem;   
+	width: 100%;
+	justify-content: space-between;
+	.hamburger {
+	    @include desktop {
+		display: none;
+	    }
+	}
+    }
+    //position: relative;
+    img {
+	height: 2.8rem;
+    }
+    .menu-menu-container {
+	width:100vw;
+	@include desktop {
+	    width: auto;
+	}
+    }
+    .menu {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	right: -100vw;
+	width: 0;
+	transition-timing-function: ease-in-out;
+	transition-property: all;
+	transition-duration: .8s;
+	@include desktop {
+	    width: auto;
+	    display: flex;
+	    position: relative;
+	    right: auto;
+	    flex-direction: row;
+	}
+	text-align: right;
+	a {
+	    right: -100vw;
+	    transition-timing-function: ease-in-out;
+	    transition-property: all;
+	    transition-duration: .1s;
+	    margin: 1.4rem;
+	    @include desktop {
+		margin: 1.4rem 2.25rem;
+	    }
+	    text-transform: uppercase;
+	    color: $color__text-main;
+	    border-bottom: solid transparent .15rem;
+	    @include desktop {
+		padding-bottom: .2rem;
+		&:active,
+		&:hover {
+		    border-bottom: solid $color__green-1 .15rem;
+		}
+	    }
+	}
+	li {
+	    display: flex;
+	    justify-content: flex-end;
+	    &:last-child > a {
+		border: solid $color__green-1 .15rem;
+		color: $color__green-1;
+		font-weight: 900;
+		width: auto;
+		padding: .4rem 2rem;
+		text-align: center;
+		@include desktop {
+		    margin: .7rem; 
+		    width: 100%;
+		    padding: .7rem 2.25rem;
+		}
+	    }
+	}
+    }
+    .menu-show {
+	display: block;
+	width: 100vw;
+	right: 0;
+	background-color: $color__background-white;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	transition-timing-function: ease-in-out;
+	transition-property: all;
+	transition-duration: .8s;
+	a {
+	    position: relative;
+	    right: 0;
+	    visibility: visible;
+	}
+    }
+}

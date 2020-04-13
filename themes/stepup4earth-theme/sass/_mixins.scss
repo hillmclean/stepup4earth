@@ -1,0 +1,60 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Media Queries 
+
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Grids
+
+
+@mixin grid-3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 6.5%;
+}
+
+@mixin grid-12 {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 1.8%;
+}
+
+@mixin grid-18 {
+	display: grid;
+	grid-template-columns: repeat(18, 1fr);
+	gap: 1.25%;
+}
+
+@mixin grid-20 {
+	display: grid;
+	grid-template-columns: repeat(20, 1fr);
+}
+
+
+// Align image center and cover
+@mixin background-image-center {
+    background-size: cover;
+    background-position: center;
+}

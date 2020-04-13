@@ -1,0 +1,83 @@
+// Structure
+
+$base__space-unit: 1.5rem;
+
+// Media Queries 
+
+$desktop: 1080px;
+$tablet: 768px;
+
+// Color Blocks 
+
+$color__mint-1: #95F3CF;
+$color__mint-2: #45CF9B;
+$color__mint-3: #6BE5B7;
+$color__mint-4: #C8FCE8;
+
+$color__cyan-1: #00D4C5;
+$color__cyan-2: #038076;
+$color__cyan-3: #01B1A4;
+$color__cyan-4: #2AD8CC; 
+$color__cyan-5: #55DED5;
+
+$color__green-light-1: #C1D96D;
+$color__green-light-2: #76901F;
+$color__green-light-3: #99B240;
+$color__green-light-4: #E2F6A2;
+$color__green-light-5: #EFFAC9;
+
+$color__green-1: #00B46E;
+$color__green-2: #006E46;
+$color__green-3: #038C58;
+$color__green-4: #27B983;
+$color__green-5: #4DC799;
+
+$color__orange-1: #FF5B00;
+$color__orange-2: #B83E07;
+$color__orange-3: #F35711;
+$color__orange-4: #FF9564;
+$color__orange-5: #FFB28F;
+
+$color__orange-dark-1: #FF5B00;
+$color__orange-dark-2: #9B3800;
+$color__orange-dark-3: #C64701;
+$color__orange-dark-4: #FF8139;
+$color__orange-dark-5: #FF9C65;
+
+// Background colors 
+
+$color__background-white: #FDFDFD;
+$color__background-green: #D9EEE6;
+$color__background-grey: #F4F0ED;
+$color__background-black: #000000;
+
+// Lines
+
+$line_green: 8px solid #00B46E;
+
+// Typography
+
+$font__main: 'montserratregular', sans-serif;
+$font__bold: 'montserratbold', sans-serif;
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+
+
+// Underscore variables
+
+$color__background-body: #fff;
+$color__text-main: #000000;
+
+$color__background-screen: #f1f1f1;
+$color__text-screen: #21759b;
+
+$color__background-hr: #ccc;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+$color__border-abbr: #666;
+
+$color__link: royalblue;
+$color__link-visited: purple;
+$color__link-hover: #006E46;

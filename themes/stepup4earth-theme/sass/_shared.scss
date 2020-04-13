@@ -1,0 +1,72 @@
+.post-type-archive-workshop,
+.post-type-archive-community_programs{
+    .hfeed{
+	.site-content {
+	    position: relative;
+	    .content-area {
+		margin: 6.25rem auto 0rem;
+		@include desktop {
+		    max-width: 1176px;
+		}
+		// Flickity Style
+		.carousel-cell {
+		    width: 100%;
+		}
+		.flickity-page-dots {
+		    display: none;
+		}
+		.flickity-prev-next-button {
+		    display: none;
+		}
+		// Classes for the pagination of Flickity
+		.carousel-generator {
+		    display: none;
+		}
+		.carousel-pagination {
+		    display: flex;
+		    justify-content: space-around;
+		    flex-direction: column;
+		    z-index: 1;
+		    margin: 1rem 0;
+		    .active-number {
+			border-bottom: .15rem solid $color__green-1;
+		    }
+		    a {
+			text-decoration: none;
+			color: $color__text-main;
+			&:active {
+			    text-decoration: none;
+			}
+		    }
+		    .carousel-pagination-numbers {
+			display: flex;
+			justify-content: flex-end;
+			a {
+			    padding: 0 1rem;
+			    font-size: 1.5rem;
+			}
+		    }
+		    .carousel-pagination-buttons {
+			display: flex;
+			justify-content: flex-end;
+			margin-top: 1rem;
+			.carousel-pagination-prev,
+			.carousel-pagination-next {
+			    i {
+				color: $color__green-1;
+				font-size: 2rem;
+			    }
+			}
+		    }
+		}
+	    }
+
+	}
+	.workshop {
+	    padding: .5rem;
+	}
+	p {
+	    margin: .5rem auto;
+	}
+    }
+}
