@@ -26,9 +26,10 @@ get_header(); ?>
 
 				<div class="site-info">
 					<h1 class="site-title-heading"><?php the_field('site_name'); ?></h1>
-
-					<div class="site-info-li"></div>
-
+					<div class="tagline-box">
+						<p class="site-info-tagline"><?php the_field('site_tagline'); ?></p>
+						<div class="site-info-li"></div>
+					</div>
 
 				</div> <!-- site-info -->
 

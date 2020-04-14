@@ -10,8 +10,8 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<header name="top" class="front-page-header">
-			<div class="front-banner-grid">
+		<header name="top" class="ecofair-page-header">
+			<div class="ecofair-banner-grid">
 				
 				<div class="sqr-light-green">
 				</div>
