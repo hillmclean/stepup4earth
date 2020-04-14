@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying workshop archive pages.
+ * The template for displaying the child theme of ecofair for  workshop archive pages.
  *
  * @package StepUp4Earth_Theme
  */
