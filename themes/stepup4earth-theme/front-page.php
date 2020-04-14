@@ -42,7 +42,7 @@ get_header(); ?>
 
 				<div class="light-green-bkgrd"></div>
 
-				<div class="banner-widgets">
+				<div class="banner-widgets-front">
 					<?php dynamic_sidebar('Banner'); ?>
 				</div><!-- .widget-area -->
 				
@@ -52,4 +52,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_footer(); ?>
+
+<?php wp_footer(); ?>
