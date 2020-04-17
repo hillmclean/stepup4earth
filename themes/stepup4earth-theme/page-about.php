@@ -15,19 +15,16 @@ get_header(); ?>
 			<span class="about-box" ></span>
 	    	<header class="entry-header">
 
-					<section class="entry-header-mobile">
+				<section class="entry-header-mobile">
 
-						<div class="top-image-m1" >
-							<img class="left" src="<?php echo get_template_directory_uri(); ?>/build/assets/images/wavemobile1.png" alt="shore picture" />
+					<div class="top-image-m1" >
+						<img class="left" src="<?php echo get_template_directory_uri(); ?>/build/assets/images/wavemobile1.png" alt="shore picture" />
 						</div>
 						
 						<div class="title-content">
-							<h4>About </h4>
-							<h4>Us</h4>
+							<?php the_title(); ?>
 						</div>
 
-						
-						
 						<div class="top-image-2" >
 							<img class="middle" src="<?php echo get_template_directory_uri(); ?>/build/assets/images/wavemobile2.png" alt="shore picture2" />
 						</div>
@@ -46,9 +43,7 @@ get_header(); ?>
 						<div class="top-image2" >
 						</div>
 						
-						<div class="our-mission-dkp">
-						<?php the_content(); ?>
-					  </div>
+						<div class="our-mission-dkp"><?php the_content(); ?> </div>
 
 						<div class="top-image3" >
 						</div>
@@ -62,13 +57,56 @@ get_header(); ?>
 
 				<section class="page-content">
 				
-				  <div class="our-mission">
-						<?php the_content(); ?>
-					</div>
+				  <div class="our-mission"><?php the_content(); ?></div>
+
+					<div class="what-we-do">
 					
-					<div class="our-values">
+					  <?php if( have_rows('what_section') ):?>
+
+						 <?php while( have_rows('what_section') ): the_row(); ?>
+								
+							<div class="wwd-copy">
+								<h5><?php the_sub_field('title'); ?></h5>
+								<p><?php the_sub_field('description'); ?></p>
+							</div>
+
+							<?php endwhile; ?>
+						<?php endif; ?>
+						
+					</div><!-- what-we-do -->
+
+					<div class="how-we-do">
 					
-		        <div class="values-title">
+						<?php if( have_rows('how_section') ):?>
+
+						<?php while( have_rows('how_section') ): the_row(); ?>
+								
+							<div class="hwd-copy">
+								<h5><?php the_sub_field('title'); ?></h5>
+								<p><?php the_sub_field('description'); ?></p>
+							</div>
+
+							<?php endwhile; ?>
+						<?php endif; ?>
+					  
+					  </div><!-- how-we-do -->
+					  
+					<div class="impact-section">
+					<?php if( have_rows('impact_section') ):?>
+
+						<?php while( have_rows('impact_section') ): the_row(); ?>
+								
+							<div class="impact-copy">
+								<h5><?php the_sub_field('title'); ?></h5>
+								<p><?php the_sub_field('description'); ?></p>
+							</div>
+
+							<?php endwhile; ?>
+						<?php endif; ?>
+				
+				  <div class="our-values">
+					
+		        	<div class="values-title">
 			        <h2>Our Core Values </h2>
 						</div>
 						
