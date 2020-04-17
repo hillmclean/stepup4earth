@@ -18,7 +18,7 @@
 	});
 	if(number === '/'){
 	    arr.forEach(e => {
-		if(e.getAttribute('href').slice(-1) == 1) {
+		if(e.getAttribute('href').slice(-1) === 1) {
 		    e.classList.add('active-number');
 		}
 	    });
