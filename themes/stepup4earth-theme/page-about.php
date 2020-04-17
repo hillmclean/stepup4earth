@@ -97,12 +97,13 @@ get_header(); ?>
 						<?php while( have_rows('impact_section') ): the_row(); ?>
 								
 							<div class="impact-copy">
-								<h5><?php the_sub_field('title'); ?></h5>
+								<h5><?php the_sub_field('section_title'); ?></h5>
 								<p><?php the_sub_field('description'); ?></p>
 							</div>
 
 							<?php endwhile; ?>
 						<?php endif; ?>
+					</div>
 				
 				  <div class="our-values">
 					
@@ -311,7 +312,20 @@ get_header(); ?>
 
 					</div><!-- mobile-desktop -->
 
+					<div class="about-cta">
+						<?php if( have_rows('call_to_action') ):?>
 
+							<?php while( have_rows('call_to_action') ): the_row(); ?>
+								
+							<div class="action-copy">
+								<h5><?php the_sub_field('title'); ?></h5>
+								<h6><?php the_sub_field('tagline'); ?></h6>
+								<p><?php the_sub_field('description'); ?></p>
+								<a href="<?php echo esc_url('cta_link' ); ?>"><?php the_sub_field('button_text'); ?></a>
+
+						<?php endwhile; ?>
+						<?php endif; ?>
+					</div>
 
 				</section>
 				
