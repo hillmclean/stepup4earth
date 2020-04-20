@@ -19,7 +19,10 @@ get_header(); ?>
 				
 				<div class="top-image2" ></div>
 				
-				<div class="our-mission-dkp"><?php the_content(); ?> </div>
+				<div class="about-title-box">
+					<div class="our-mission-dkp"><?php the_content(); ?> </div>
+					<h1 class="our-mission-header-mobile"><?php the_title(); ?></h1>
+				</div>
 
 				<div class="top-image3" ></div>
 
@@ -31,33 +34,31 @@ get_header(); ?>
 			</section> <!-- .our-mission-mobile -->
 
 			<section class="whatwedo-container">
-				<div class="what-we-do">		
+				<div class="whatwedo-copy">		
 					<?php if( have_rows('what_section') ):?>
 						<?php while( have_rows('what_section') ): the_row(); ?>
 							
-						<div class="wwd-copy">
 							<h5><?php the_sub_field('title'); ?></h5>
 							<p><?php the_sub_field('description'); ?></p>
-						</div>
 
 						<?php endwhile; ?>
 					<?php endif; ?>	
 				</div><!-- what-we-do -->
+				<div class="whatwedo-box"></div>
 			</section> <!--whatwedo-container -->
 			
-			<section class="howwedo-container">
-				<div class="how-we-do">
+			<section class="howwedo-container">	
+				<div class="howwedo-copy">
 					<?php if( have_rows('how_section') ):?>
 						<?php while( have_rows('how_section') ): the_row(); ?>
 								
-							<div class="hwd-copy">
 								<h5><?php the_sub_field('title'); ?></h5>
 								<p><?php the_sub_field('description'); ?></p>
-							</div>
 
 						<?php endwhile; ?>
 					<?php endif; ?>
-				</div><!-- how-we-do -->
+				</div><!-- howwedo-copy -->
+				<div class="howwedo-box"></div>
 			</section> <!-- howwedo-container -->
 			
 			<section class=impact-container>
@@ -83,8 +84,8 @@ get_header(); ?>
 				<div class="icons">	
 					<div class="graph-icon">
 						<div class="graph-box" ></div>
-							<img class="graph" src="<?php echo get_template_directory_uri(); ?>/build/assets/icons/everyaction.png" alt="graph icon" >
-							<h5>Every Action Matters</h5>
+						<img class="graph" src="<?php echo get_template_directory_uri(); ?>/build/assets/icons/everyaction.png" alt="graph icon" >
+						<h5>Every Action Matters</h5>
 					</div>
 
 					<div class="books-icon" >
@@ -211,7 +212,6 @@ get_header(); ?>
 					<?php endwhile; ?>
 				<?php endif; ?>
 			</section> <!-- about-cta -->
-				
 				
 				
 		<?php endwhile; // End of the loop. ?>
