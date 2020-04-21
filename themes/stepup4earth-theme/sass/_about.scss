@@ -385,12 +385,18 @@
           width: 11rem;
           height: 17rem;
           position: relative;
+          .founder-name {
+            position: absolute;
+            width: 10rem;
+            top: 70px;
+            left: 200px;
+          }
         }
       }
     }
 
     .founder1-box1 {
-      background-color: #00b46e;
+      background-color: $color__green-1;
       position: absolute;
       top: -30px;
       left: 176px;
@@ -401,18 +407,11 @@
     .founder1-box2 {
       position: absolute;
       z-index: -1;
-      background-color: #d9eee6;
+      background-color: $color__background-green;
       width: 23rem;
       height: 12rem;
       top: 50px;
       left: -7px;
-    }
-
-    .founder-name {
-      position: absolute;
-      width: 10rem;
-      top: 70px;
-      left: 200px;
     }
 
     .founder1-nameline {
@@ -425,13 +424,53 @@
     }
 
     .founder2 {
+      padding-top: 5rem;
       .image-name {
+        display: flex;
+        flex-direction: row-reverse;
         .founder-image {
           width: 11rem;
           height: 17rem;
+          position: relative;
+          .founder-name {
+            position: absolute;
+            width: 10rem;
+            top: 70px;
+            left: -180px;
+          }
         }
       }
     }
+
+    .founder2-box1 {
+      position: absolute;
+      z-index: 1;
+      background-color: $color__green-light-1;
+      width: 3.7rem;
+      height: 3.7rem;
+      top: -30px;
+      left: -30px;
+    }
+
+    .founder2-nameline {
+      position: absolute;
+      z-index: 2;
+      border-bottom: 2px solid $color__green-light-1;
+      width: 10rem;
+      top: 50px;
+      left: 65px;
+    }
+
+    .founder2-box2 {
+      position: absolute;
+      z-index: -1;
+      background-color: #EBE9E7;
+      width: 13rem;
+      height: 39rem;
+      top: 90px;
+      left: -30px;
+    }
+    
 
     .founder3 {
       .image-name {
@@ -452,15 +491,6 @@
       .founder2-mobile {
         padding-bottom: 4rem;
         
-        .founder2-box1 {
-          position: absolute;
-          z-index: 1;
-          background-color: #c4da76;
-          width: 3.7rem;
-          height: 3.7rem;
-          margin-left: 9.5rem;
-          margin-top: .4rem;
-        }
         .image-name {
           display: flex;
           width: 100%;
@@ -477,15 +507,6 @@
             width: 40%;
             align-self: center;
             padding-left: 1rem;
-            .founder2-nameline {
-              position: absolute;
-              z-index: 2;
-              background-color: #c4da76;
-              width: 8rem;
-              height: .2rem;
-              margin-top: 2rem;
-              margin-left: 3.6rem;
-            }
           }
         }
         .content {

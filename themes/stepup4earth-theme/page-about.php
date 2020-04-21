@@ -130,11 +130,10 @@ get_header(); ?>
 									<div class="founder1-box2" ></div>
 									<h5 class="founder-name"><div class="founder1-nameline" ></div><?php the_sub_field('name1'); ?></h5>
 								</div>
-
 							</div> <!-- image-name -->
 
 							<div class="content">
-								<p><div class="founder1-box3" ></div><?php the_sub_field('prosopography1'); ?></p>
+								<p><?php the_sub_field('prosopography1'); ?></p>
 							</div>
 						</div> <!-- founder1 --> 
 							
@@ -142,21 +141,19 @@ get_header(); ?>
 				<?php endif; ?>
 						
 				<?php if( have_rows('founder2') ):?>
-					<?php while( have_rows('founder2') ): the_row(); 
-						// Get sub field values.
-						$name2 = get_sub_field('name2');
-						$prosopography2 = get_sub_field('prosopography2');
-						?>
+					<?php while( have_rows('founder2') ): the_row(); ?>
 								
 						<div id="founder2" class="founder2">
-							<div class="founder2-box1" ></div>
 							<div class="image-name">
-								<h5><div class="founder2-nameline" ></div><?php the_sub_field('name2'); ?></h5>
-								<div class="founder-image" style="background: url(<?php echo the_sub_field('image2'); ?>); background-size: cover; background-position: center;"></div>
+								<div class="founder-image" style="background: url(<?php echo the_sub_field('image2'); ?>); background-size: cover; background-position: center;">
+									<div class="founder2-box1" ></div>
+									<div class="founder2-box2" ></div>
+									<h5 class="founder-name"><div class="founder2-nameline" ></div><?php the_sub_field('name2'); ?></h5>
+								</div>
 							</div> <!--image-name -->
 
 							<div class="content">
-								<p><span class="founder2-box2" ></span><?php echo get_sub_field('prosopograghy2');?></p>
+								<p><?php echo get_sub_field('prosopograghy2');?></p>
 							</div>
 						</div> <!-- founder2 -->
 
