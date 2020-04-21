@@ -194,6 +194,7 @@ get_header(); ?>
 								<h5><?php the_sub_field('title'); ?></h5>
 								<h6><?php the_sub_field('tagline'); ?></h6>
 								<p><?php the_sub_field('description'); ?></p>
+								<div class="action-box" ></div>
 								<div class="act-cta-button">
 									<a  href="<?php echo esc_url('cta_link' ); ?>"><p><?php the_sub_field('button_text'); ?></p></a>
 								</div>
@@ -203,6 +204,36 @@ get_header(); ?>
 					<?php endwhile; ?>
 				<?php endif; ?>
 			</section> <!-- about-cta -->
+
+			<section class="partners">
+				<?php if(get_field('partner_section_')): ?>
+					<?php while(has_sub_field('partner_section_')): ?>
+						<h5><?php the_sub_field('title_for_parter_section'); ?></h5>
+
+						<?php if(have_rows('partner_logos')): ?>
+							<div class="partner-logos">
+								<?php while(have_rows('partner_logos')): the_row(); ?>
+								<div class="logo-image" style="background: url(<?php  echo the_sub_field('image'); ?>); background-size: cover; background-position: center;"></div> 
+								<?php endwhile; ?>
+							</div>
+						<?php endif; ?>
+
+					<?php endwhile; ?>
+				<?php endif; ?>
+
+
+
+
+				</section> <!-- end of host section -->
+
+				<section class="top-return">
+					<p>Back to top</p>
+					<div class="return-arrow-up">
+					<a href="#top">
+					<i class="fas fa-arrow-up"></i>
+						</div>
+					</a>
+				</section>
 				
 				
 		<?php endwhile; // End of the loop. ?>

@@ -559,17 +559,30 @@
     background-size: cover;
     background-position: right;
     grid-column: 1 / 2;
+    z-index: 20;
   }
 
   .action-copy {
     grid-column: 2 / 7;
     padding: 0rem 0rem 0rem 1rem;
+    position: relative;
+    z-index: 10;
     h5 {
       margin-bottom: 0px;
     }
     h6 {
       margin: 0px;
     }
+  }
+
+  .action-box {
+    position: absolute;
+    z-index: -1;
+    background-color:  $color__background-green;
+    width: 19rem;
+    height: 10rem;
+    top: 20px;
+    left: -50px;
   }
 
   .act-cta-button {
@@ -595,4 +608,17 @@
     }
   }
   
+// PARTNERS //
+
+.partners {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-image {
+  width: 5rem;
+  height: 5rem;
+}
 
