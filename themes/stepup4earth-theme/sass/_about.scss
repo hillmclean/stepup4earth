@@ -170,8 +170,6 @@
   width: 100%;
   text-align: center;
   margin-top: 3rem;
-  // border-top: 5px solid $color__background-green;
-  // border-bottom: 5px solid $color__background-green;
   .impact-section {
     background-color: white;
     z-index: 3;
@@ -519,5 +517,54 @@
       left: -90px;
     }
   } // end of founders
+
+  // ACT NOW //
+  .action-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 3rem 1rem 3rem 0rem;
+    height: 40rem;
+  }
+
+  .action-image {
+    background-image: url(../assets/images/wavedesktop1.png);
+    background-size: cover;
+    background-position: right;
+    grid-column: 1 / 2;
+  }
+
+  .action-copy {
+    grid-column: 2 / 7;
+    padding: 0rem 0rem 0rem 1rem;
+    h5 {
+      margin-bottom: 0px;
+    }
+    h6 {
+      margin: 0px;
+    }
+  }
+
+  .act-cta-button {
+    width: 90%;
+    height: 2.5rem;
+    background-color: $color__green-1;
+    width: 100%;
+    height: 3rem;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    color: white;
+    text-decoration: none;
+    background-color: $color__green-1;
+    width: 100%;
+    height: 3rem;
+    text-transform: uppercase;
+    margin: 0px;
+    p {
+      margin: 0px;
+    }
+    }
+  }
   
 

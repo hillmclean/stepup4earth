@@ -184,13 +184,18 @@ get_header(); ?>
 			<section class="about-cta">
 				<?php if( have_rows('call_to_action') ):?>
 					<?php while( have_rows('call_to_action') ): the_row(); ?>
-					
-						<div class="action-copy">
-							<h5><?php the_sub_field('title'); ?></h5>
-							<h6><?php the_sub_field('tagline'); ?></h6>
-							<p><?php the_sub_field('description'); ?></p>
-							<a href="<?php echo esc_url('cta_link' ); ?>"><?php the_sub_field('button_text'); ?></a>
-						</div>
+						<div class="action-container">
+							<div class="action-image"></div>
+						
+							<div class="action-copy">
+								<h5><?php the_sub_field('title'); ?></h5>
+								<h6><?php the_sub_field('tagline'); ?></h6>
+								<p><?php the_sub_field('description'); ?></p>
+								<div class="act-cta-button">
+									<a  href="<?php echo esc_url('cta_link' ); ?>"><p><?php the_sub_field('button_text'); ?></p></a>
+								</div>
+							</div>
+						</div> <!-- action-container -->
 
 					<?php endwhile; ?>
 				<?php endif; ?>
