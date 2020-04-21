@@ -67,7 +67,10 @@ get_header(); ?>
 						<?php while( have_rows('impact_section') ): the_row(); ?>
 								
 							<div class="impact-copy">
-								<h5><?php the_sub_field('section_title'); ?></h5>
+								<h5 class="impact-title"><?php the_sub_field('section_title'); ?>
+								<div class="impact-box-1"></div>
+								<div class="impact-box-2"></div>
+								</h5>
 								<p><?php the_sub_field('description'); ?></p>
 							</div>
 
