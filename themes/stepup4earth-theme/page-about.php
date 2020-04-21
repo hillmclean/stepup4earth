@@ -123,7 +123,6 @@ get_header(); ?>
 				<?php if( have_rows('founder1') ):?>
 					<?php while( have_rows('founder1') ): the_row(); 
 						// Get sub field values.
-						$image1 = get_sub_field('image1');
 						$name1 = get_sub_field('name1');
 						$prosopography1 = get_sub_field('prosopography1');
 						?>
@@ -131,9 +130,8 @@ get_header(); ?>
 						<div id="founder1" class="founder1">
 							<div class="founder1-box1" ></div>
 							<div class="image-name">
-								<div class="image">
-									<img src="<?php echo esc_url( $image1 ); ?>" alt="">
-								</div>
+								<div class="founder-image" style="background: url(<?php echo the_sub_field('image1'); ?>); background-size: cover; background-position: center;"></div>
+
 								<div class="founder1-box2" ></div>
 								<h5><div class="founder1-nameline" ></div><?php the_sub_field('name1'); ?></h5>
 							</div> <!-- image-name -->
@@ -149,7 +147,6 @@ get_header(); ?>
 				<?php if( have_rows('founder2') ):?>
 					<?php while( have_rows('founder2') ): the_row(); 
 						// Get sub field values.
-						$image2 = get_sub_field('image2');
 						$name2 = get_sub_field('name2');
 						$prosopography2 = get_sub_field('prosopography2');
 						?>
@@ -158,9 +155,7 @@ get_header(); ?>
 							<div class="founder2-box1" ></div>
 							<div class="image-name">
 								<h5><div class="founder2-nameline" ></div><?php the_sub_field('name2'); ?></h5>
-								<div class="image">
-									<img src="<?php echo esc_url( $image2 ); ?>" alt="">
-								</div>
+								<div class="founder-image" style="background: url(<?php echo the_sub_field('image2'); ?>); background-size: cover; background-position: center;"></div>
 							</div> <!--image-name -->
 
 							<div class="content">
@@ -174,7 +169,6 @@ get_header(); ?>
 				<?php if( have_rows('founder3') ):?>
 					<?php while( have_rows('founder3') ): the_row(); 
 						// Get sub field values.
-						$image3 = get_sub_field('image3');
 						$name3 = get_sub_field('name3');
 						$prosopography3 = get_sub_field('prosopography3');
 						?>
@@ -182,9 +176,7 @@ get_header(); ?>
 						<div id="founder3" class="founder3">
 							<div class="founder3-box1" ></div>
 							<div class="image-name">
-								<div class="image">
-									<img src="<?php echo esc_url( $image3 ); ?>" alt="">
-								</div>
+								<div class="founder-image" style="background: url(<?php echo the_sub_field('image3'); ?>); background-size: cover; background-position: center;"></div>
 								<div class="founder3-box2" ></div>
 								<h5><div class="founder3-nameline" ></div><?php the_sub_field('name3'); ?></h5>
 							</div> <!-- image-name --> 
