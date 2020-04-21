@@ -155,7 +155,7 @@
   position: absolute;
   width: 8rem;
   height: 8rem;
-  background-color: $color__orange-5;
+  background-color: $color__mint-4;
   grid-column: 5 / 7;
   z-index: 2;
   top: 0px;
@@ -473,154 +473,53 @@
     
 
     .founder3 {
+      padding-top: 3rem;
       .image-name {
         .founder-image {
           width: 11rem;
           height: 17rem;
-        }
-      }
-    }
-  
-    // Founder 2 Mobile//////////////
-    .mobile-desktop{
-
-      .founder2-desktop {
-        display: none;
-      }
-      
-      .founder2-mobile {
-        padding-bottom: 4rem;
-        
-        .image-name {
-          display: flex;
-          width: 100%;
-          height: auto;
-          padding-right: 1rem;
-          justify-content: space-between;
-          .image {
-            padding-top: 2rem;
-            position: relative;
-            z-index: 0;
-            width: 50%;
-          }
-          h5 {
-            width: 40%;
-            align-self: center;
-            padding-left: 1rem;
-          }
-        }
-        .content {
-          p {
-            padding-left: 1rem;
-            position: relative;
-            z-index: 2;
-            .founder2-box2 {
-              position: absolute;
-              z-index: -1;
-              background-color: #c4da76;
-              width: 1.5rem;
-              height: 3rem;
-              margin-right: -3rem;
-              
-            }
-          }
-        }
-      }
-      // Founder 2 Desktop//////////////
-      @include desktop {
-        .founder2-mobile {
-          display: none;
-        }
-        .founder2-desktop {
-          display: flex;
-          padding-bottom: 6rem;
-          
-          .founder2-box1 {
+          position: relative;
+          .founder-name {
             position: absolute;
-            z-index: 1;
-            background-color: #c4da76;
-            width: 7rem;
-            height: 6.9rem;
-            margin-left: 23.5rem;
-            margin-top: -3rem;
-        
-          }
-          .content-image {
-            display: flex;
-            width: 100%;
-            height: auto;
-            .content {
-              width: 55%;
-              height: 100%;
-              padding-top: 6rem;
-
-              h5 {
-                text-align: right;
-                width: 90%;
-                font-size: 48px;
-              }
-            
-
-              p {
-                text-align: end;
-                width: 90%;
-                padding-left: 16rem;
-                position: relative;
-                z-index: 2;
-                font-size: 18px;
-              }
-              .founder2-box4 {
-                position: absolute;
-                z-index: 1;
-                background-color: #c4da76;
-                width: 4rem;
-                height: 3.9rem;
-                margin-left: 4rem;
-                margin-top: -15rem;
-              }
-              .founder2-box2 {
-                position: absolute;
-                z-index: -1;
-                background-color: #c4da76;
-                width: 3.3rem;
-                height: 8rem;
-                margin-right: -3rem;
-                margin-top: -11rem;
-                
-              }
-
-            }
-    
-            .image {
-              position: relative;
-              z-index: 0;
-              width: 26rem;
-              height: auto;
-              padding-top: 2rem;
-            }
-            .founder2-nameline {
-              position: absolute;
-              z-index: 2;
-              background-color: #c4da76;
-              width: 23rem;
-              height: .4rem;
-              left: -300px;
-              top: 250px;
-            }
-            .founder2-box3 {
-              position: absolute;
-              z-index: -2;
-              background-color: #ebebeb;
-              width: 100%;
-              height: 32rem;
-              margin-top: 4rem;
-  
-            }
-
+            width: 10rem;
+            top: 70px;
+            left: 200px;
           }
         }
       }
     }
+
+    .founder3-box1 {
+      position: absolute;
+      z-index: 3;
+      background-color: $color__cyan-4;
+      width: 3.7rem;
+      height: 3.7rem;
+      top: -20px;
+      left: 150px;
+    }
+
+    .founder3-box2 {
+      position: absolute;
+      z-index: -1;
+      background-color:  $color__background-green;
+      width: 23rem;
+      height: 16rem;
+      top: 95px;
+      left: -7px;
+    }
+
+    .founder3-nameline {
+      position: absolute;
+      z-index: 2;
+      border-bottom: 2px solid  $color__cyan-4;
+      width: 10rem;
+      top: 10px;
+      top: 70px;
+      left: -90px;
+    }
+  
+
     // Founder 3 Mobile//////////////
     .mobile-desktop {
       .founder3-desktop{
@@ -663,15 +562,7 @@
               margin-left: -6rem;
             }
           }
-          .founder3-box2 {
-            position: absolute;
-            z-index: -1;
-            background-color: #d3ebe2;
-            width: 100%;
-            height: 18.6rem;
-            margin-right: 9rem;
-            margin-top: 6rem;
-          }
+    
         }
         .content {
           padding-left: 1rem;

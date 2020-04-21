@@ -161,22 +161,19 @@ get_header(); ?>
 				<?php endif; ?>
 
 				<?php if( have_rows('founder3') ):?>
-					<?php while( have_rows('founder3') ): the_row(); 
-						// Get sub field values.
-						$name3 = get_sub_field('name3');
-						$prosopography3 = get_sub_field('prosopography3');
-						?>
+					<?php while( have_rows('founder3') ): the_row(); ?>
 								
 						<div id="founder3" class="founder3">
-							<div class="founder3-box1" ></div>
 							<div class="image-name">
-								<div class="founder-image" style="background: url(<?php echo the_sub_field('image3'); ?>); background-size: cover; background-position: center;"></div>
-								<div class="founder3-box2" ></div>
-								<h5><div class="founder3-nameline" ></div><?php the_sub_field('name3'); ?></h5>
+								<div class="founder-image" style="background: url(<?php echo the_sub_field('image3'); ?>); background-size: cover; background-position: center;">
+									<div class="founder3-box1" ></div>
+									<div class="founder3-box2" ></div>
+									<h5 class="founder-name"><div class="founder3-nameline" ></div><?php the_sub_field('name3'); ?></h5>
+								</div>
 							</div> <!-- image-name --> 
 
 							<div class="content">	
-								<p><div class="founder3-box3" ></div><?php the_sub_field('prosopography3'); ?></p></div>
+								<p><?php the_sub_field('prosopography3'); ?></p></div>
 							</div>
 						</div> <!-- founder3 -->
 								
