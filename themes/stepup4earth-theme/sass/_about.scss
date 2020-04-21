@@ -615,10 +615,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-top: 1px solid #b8b8b8;
+  padding-top: 3rem;
+  h5 {
+    margin: 0px;
+  }
+  p {
+    margin: 0px;
+  }
+}
+
+.partner-logos {
+  padding-bottom: 3rem;
 }
 
 .logo-image {
-  width: 5rem;
-  height: 5rem;
+  width: 8rem;
+  height: 6rem;
 }
 
