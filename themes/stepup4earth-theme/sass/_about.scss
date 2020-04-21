@@ -180,6 +180,8 @@
   }
 }
 
+// VALUES //
+
   .our-values {
     position: relative;
     z-index: 3;
@@ -187,8 +189,9 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-top: 2rem 0rem 1rem 0rem;
+    padding: 2rem 0rem 1rem 0rem;
     width: 100%;
+    background-color: $color__background-grey;
     h5 {
       margin-block-start: .7rem;
       @include desktop {
@@ -219,8 +222,8 @@
           width: 5.4rem;
           height: 5.4rem;
           background-color:  #d9eee6;
-          margin-left: 3.5rem;    
-          margin-top: -2rem;    
+          top: -30px;
+          left: 100px;  
         }
         .graph {
           width: 6.25rem;
@@ -240,9 +243,9 @@
           z-index: -1;
           width: 5.4rem;
           height: 5.4rem;
-          background-color:  #d9eee6;
-          margin-left: 4.2rem;    
-          margin-top: 3rem;    
+          background-color:  #d9eee6; 
+          top: 50px;
+          left: 100px;
         
         }
         .books {
@@ -263,10 +266,8 @@
           z-index: -1;
           width: 5.4rem;
           height: 5.4rem;
-          background-color:  #d9eee6;
-          margin-left: -2.42rem;    
-          margin-top: 3rem;    
-        
+          background-color:  #d9eee6; 
+          top: 50px;     
         }
         .unity {
           width: 6.25rem;
