@@ -10,6 +10,9 @@
     height: 28rem;
     position: relative;
     margin-bottom: 3rem;
+    @include tablet {
+      height: 40rem;
+    }
     @include desktop {
       grid-template-columns: repeat(20, 1fr);
       grid-template-rows: repeat(3, 1fr);
@@ -25,12 +28,26 @@
     }
     .our-mission-dkp {
       display: none;
+      @include tablet {
+        display: grid;
+        text-align: center;
+        padding: 0rem 1rem;
+        h2 {
+          font-size: 1.5rem;
+          border-bottom: 1.8px solid $color__green-1;
+          padding-bottom: 0.5rem;
+        }
+      }
     }
     .our-mission-header-mobile {
-      font-size: 1.25rem;
-      text-align: center;
-      border-bottom: 1.8px solid $color__green-1;
-    }
+        font-size: 1.25rem;
+        text-align: center;
+        border-bottom: 1.8px solid $color__green-1;
+        @include tablet {
+          display: none;
+        }
+      }
+
   
     .top-image1 {
       display: none;
@@ -80,6 +97,9 @@
     height: 80rem;
     background-color: $color__background-grey;
     top: 251px;
+    @include tablet {
+      top: 314px;
+    }
     @include desktop {
       height: 50rem;
       margin-top: 0rem;
@@ -98,7 +118,7 @@
     h2{
       font-size: 1.25rem;
     }
-    @include desktop {
+    @include tablet {
       display: none;
     }
   }
