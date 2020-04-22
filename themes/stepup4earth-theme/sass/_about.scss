@@ -265,10 +265,19 @@
     }
 
     .icons {
+      @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+      }
       .graph-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: relative;
         z-index: 2;
-        text-align: center;
         padding-bottom: 2.1875rem;
         .graph-box {
           position: absolute;
@@ -281,6 +290,11 @@
         }
         .graph {
           width: 6.25rem;
+          height: 6.25rem;
+          background-image: url(../assets/icons/everyaction.png);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
           @include desktop {
             width: 100%;
           }
@@ -288,9 +302,12 @@
       }
 
       .books-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: relative;
         z-index: 2;
-        text-align: center;
         padding-bottom: 2.1875rem;
         .books-box {
           position: absolute;
@@ -300,10 +317,19 @@
           background-color: $color__background-green; 
           top: 50px;
           left: 100px;
+          @include tablet {
+            top: -30px;
+            left: 70px;
+          }
         
         }
         .books {
           width: 6.25rem;
+          height: 6.25rem;
+          background-image: url(../assets/icons/education.png);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
           @include desktop {
             width: 100%;
           }
@@ -311,9 +337,12 @@
       }
 
       .unity-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: relative;
         z-index: 2;
-        text-align: center;
         padding-bottom: 2.1875rem;
         .unity-box {
           position: absolute;
@@ -321,10 +350,18 @@
           width: 5.4rem;
           height: 5.4rem;
           background-color:  $color__background-green; 
-          top: 50px;     
+          top: 50px;
+          @include tablet {
+            left: 90px;
+          }   
         }
         .unity {
           width: 6.25rem;
+          height: 6.25rem;
+          background-image: url(../assets/icons/community.png);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
           @include desktop {
             width: 55%;
           }
@@ -410,7 +447,7 @@
 // FOUNDERS //
 
   .founders {
-    padding: 3.5rem 0.5rem 1rem 0.5rem;
+    padding: 3.5rem 0.5rem 3.5rem 0.5rem;
     background-color: $color__background-grey;
     position: relative;
     z-index: 0;
@@ -576,6 +613,9 @@
     background-position: right;
     grid-column: 1 / 2;
     z-index: 20;
+    @include tablet {
+      grid-column: 1 / 3;
+    }
   }
 
   .action-copy {
@@ -583,6 +623,9 @@
     padding: 0rem 0rem 0rem 1rem;
     position: relative;
     z-index: 10;
+    @include tablet {
+      grid-column: 3 / 7;
+    }
     h5 {
       margin-bottom: 0px;
     }

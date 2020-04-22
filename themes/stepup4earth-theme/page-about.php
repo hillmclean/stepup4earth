@@ -87,19 +87,19 @@ get_header(); ?>
 				<div class="icons">	
 					<div class="graph-icon">
 						<div class="graph-box" ></div>
-						<img class="graph" src="<?php echo get_template_directory_uri(); ?>/build/assets/icons/everyaction.png" alt="graph icon" >
+						<div class="graph"></div>
 						<h5>Every Action Matters</h5>
 					</div>
 
 					<div class="books-icon" >
 						<div class="books-box" ></div>
-							<img class="books" src="<?php echo get_template_directory_uri(); ?>/build/assets/icons/education.png" alt="books icon" >
+							<div class="books"></div>
 							<h5>Education</h5>
 					</div>
 
 					<div class="unity-icon">
 						<div class="unity-box" ></div>
-							<img class="unity" src="<?php echo get_template_directory_uri(); ?>/build/assets/icons/community.png" alt="unity icon" />
+							<div class="unity"></div>
 							<h5>Community Caring</h5>
 						</div>
 				</div><!-- .icons -->
