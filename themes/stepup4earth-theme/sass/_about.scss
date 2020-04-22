@@ -43,6 +43,7 @@
           padding-bottom: 0.5rem;
           @include desktop {
             margin-bottom: 0px;
+            font-size: 2rem;
           }
         }
       }
@@ -123,7 +124,7 @@
     }
     @include desktop {
       margin-top: 0rem;
-      top: 560px;
+      top: 599px;
   }
 }
 
@@ -160,6 +161,9 @@
   padding: 0rem 2rem;
   h5 {
     margin-bottom: 1rem;
+    @include desktop {
+      font-size: 2.25rem;
+    }
   }
 }
 
@@ -190,6 +194,9 @@
   padding: 0rem 2rem;
   h5 {
     margin-bottom: 1rem;
+    @include desktop {
+      font-size: 2.25rem;
+    }
   }
 }
 
@@ -216,6 +223,9 @@
     z-index: 3;
     width: 100%;
     padding: 4rem 0rem;
+    @include desktop {
+      padding: 4.5rem 0rem 4rem 0rem;
+    }
   }
 }
 
@@ -236,6 +246,10 @@
   position: relative;
   z-index: 20;
   margin-top: 0rem;
+  @include desktop {
+    font-size: 2.25rem;
+    margin-bottom: 1.8rem;
+  }
 }
 
 .impact-box-1 {
@@ -245,6 +259,12 @@
   background-color: $color__orange-1;
   top: -5px;
   left: -17px;
+  @include desktop {
+    width: 2rem;
+    height: 2rem;
+    top: -15px;
+    left: -37px;
+  }
 }
 
 .impact-box-2 {
@@ -254,6 +274,12 @@
   background-color: $color__orange-4;
   top: 20px;
   left: 110px;
+  @include desktop {
+    top: 36px;
+    left: 220px;
+    width: 2.3rem;
+    height: 2.3rem;
+  }
 }
 
 // VALUES //
@@ -281,7 +307,7 @@
         font-size: 1.5rem;
         @include desktop {
           width: 100%;
-          font-size: 2rem;
+          font-size: 2.25rem;
         }
       }
     }
@@ -292,6 +318,7 @@
         flex-direction: row;
         justify-content: space-between;
         width: 80%;
+        max-width: $desktop;
       }
       .graph-icon {
         display: flex;
@@ -452,6 +479,9 @@
     background-color: $color__background-grey;
     position: relative;
     z-index: 0;
+    @include desktop {
+      padding: 6rem 0.5rem 3.5rem 0.5rem;
+    }
     
     p {
       position: relative;
@@ -460,17 +490,41 @@
     }
 
     .founder1 {
+      max-width: $desktop;
+      margin: 0 auto;
+      @include desktop {
+      display: flex;
+      }
       .image-name {
         .founder-image {
           width: 11rem;
           height: 17rem;
           position: relative;
+          @include desktop {
+            width: 19rem;
+            height: 29rem;
+            }
           .founder-name {
             position: absolute;
             width: 10rem;
             top: 70px;
             left: 200px;
+            @include desktop {
+              width: 20rem;
+              top: -45px;
+              left: 330px;
+            }
           }
+          p {
+            @include desktop {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+      .content {
+        @include desktop {
+          padding: 7rem 1rem 0rem 4rem;
         }
       }
     }
@@ -482,6 +536,12 @@
       left: 176px;
       width: 2rem;
       height: 2rem;
+      @include desktop {
+        width: 4rem;
+        height: 4rem;
+        top: -64px;
+        left: -64px;
+      }
     }
 
     .founder1-box2 {
@@ -492,6 +552,12 @@
       height: 12rem;
       top: 50px;
       left: -7px;
+      @include desktop {
+        width: 97rem;
+        height: 20rem;
+        top: 90px;
+        left: -64px;
+      }
     }
 
     .founder1-nameline {
@@ -501,6 +567,11 @@
       width: 10rem;
       top: 73px;
       left: -130px; 
+      @include desktop {
+        width: 20rem;
+        top: 130px;
+        left: -100px;
+      }
     }
 
     .founder2 {
@@ -512,6 +583,10 @@
           width: 11rem;
           height: 17rem;
           position: relative;
+          @include desktop {
+            width: 19rem;
+            height: 29rem;
+            }
           .founder-name {
             position: absolute;
             width: 10rem;
@@ -559,6 +634,10 @@
           width: 11rem;
           height: 17rem;
           position: relative;
+          @include desktop {
+            width: 19rem;
+            height: 29rem;
+            }
           .founder-name {
             position: absolute;
             width: 10rem;
