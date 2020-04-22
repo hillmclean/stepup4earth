@@ -93,9 +93,11 @@
           margin: 0rem; 
           font-size: 2.813rem;
           list-style: none;
-          @include desktop {
+          @include tablet {
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
+            width: 11rem;
           }
            .fa-facebook-square{
              color: white;
