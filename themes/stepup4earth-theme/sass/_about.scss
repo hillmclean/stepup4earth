@@ -17,8 +17,9 @@
       grid-template-columns: repeat(20, 1fr);
       grid-template-rows: repeat(3, 1fr);
       grid-gap: 1rem;
-      max-width: 1920px;
       margin: 0 auto;
+      padding-bottom: 3rem;
+      height: 100vh;
     }
 
     .about-title-box {
@@ -26,7 +27,7 @@
       grid-column: 3 / 5;
       position: relative;
       @include desktop {
-        grid-row: 1 / 4; 
+        grid-row: 2 / 3; 
         grid-column: 10 / 16;
       }
     }
@@ -40,6 +41,9 @@
           font-size: 1.5rem;
           border-bottom: 1.8px solid $color__green-1;
           padding-bottom: 0.5rem;
+          @include desktop {
+            margin-bottom: 0px;
+          }
         }
       }
     }
@@ -118,9 +122,8 @@
       top: 314px;
     }
     @include desktop {
-      height: 50rem;
       margin-top: 0rem;
-      top: 800px;
+      top: 560px;
   }
 }
 
@@ -148,6 +151,7 @@
   width: 100%;
   margin: 0 auto;
   position: relative;
+  max-width: $desktop;
 }
 
 .whatwedo-copy {
@@ -177,6 +181,7 @@
   text-align: right;
   margin: 0 auto;
   position: relative;
+  max-width: $desktop;
 }
 
 .howwedo-copy {
@@ -389,33 +394,29 @@
         width: 90%;
         justify-content: space-around;
         align-items: flex-end;
-        padding-bottom: 2rem;
+        padding-bottom: 0rem;
 
       }
     }
   }  
 
   .buttons {
-    position: relative;
     z-index: 2;
     width: 90%;
-    .button-box {
-      display: none;
-      @include desktop {
-        display: inline;
-        position: absolute;
-        z-index: -1;
-        width: 31rem;
-        height: 8.8rem;
-        background-color: $color__background-green;
-        margin-top: -2rem;
-      }
+    @include desktop {
+      display: flex;
+      justify-content: center;
     }
-    .volunteer-button-about {
+    }
+  .volunteer-button-about {
     background-color: $color__green-1;
     text-align: center;
     padding: .4rem;
     margin: $base__space-unit;
+    @include desktop {
+      width: 20rem;
+    }
+  }
     .volunteer-button-text-about {
       text-transform: uppercase;
       text-decoration: none;
@@ -424,13 +425,6 @@
         margin: 0rem;
       }
     }
-    @include desktop {
-      display: flex;
-      width: 20%;
-      justify-content: space-around;
-
-    }
-   }
 
 
     .donate-button-about {
@@ -438,6 +432,10 @@
     text-align: center;
     padding: .4rem;
     margin: $base__space-unit;
+    @include desktop {
+      width: 20rem;
+    }
+    }
     .donate-button-text-about {
       text-transform: uppercase;
       text-decoration: none;
@@ -446,20 +444,6 @@
       margin: 0rem;
       }
     }
-    @include desktop {
-      display: flex;
-      width: 20%;
-      justify-content: space-around;
-
-    }
-   }
-   @include desktop {
-    display: flex;
-    width: 90%;
-    justify-content: space-around;
-
-   }
-  }
 
 // FOUNDERS //
 
