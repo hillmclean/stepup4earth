@@ -25,6 +25,10 @@
       grid-row: 2 / 3; 
       grid-column: 3 / 5;
       position: relative;
+      @include desktop {
+        grid-row: 1 / 4; 
+        grid-column: 10 / 16;
+      }
     }
     .our-mission-dkp {
       display: none;
@@ -52,6 +56,7 @@
     .top-image1 {
       display: none;
       @include desktop {
+      display: grid;
       background-image: url(../assets/images/wavedesktop1.png);
       background-size: cover;
       background-position: right;
@@ -69,6 +74,10 @@
       background-size: cover;
       background-position: right;
       z-index: 2;
+      @include desktop {
+        grid-row: 1 / 4; 
+        grid-column: 4 / 10;
+      }
     }
     .top-image3 {
       background-image: url(../assets/images/wavedesktop3.png);
@@ -78,6 +87,10 @@
       grid-column: 5 / 6;
       width: 100%;
       z-index: 2;
+      @include desktop {
+        grid-row: 1 / 4; 
+        grid-column: 16 / 18;
+      }
     }
     .top-image4 {
       background-image: url(../assets/images/wavedesktop4.png);
@@ -87,6 +100,10 @@
       grid-column: 6 / 7;
       width: 100%;
       z-index: 2;
+      @include desktop {
+        grid-row: 1 / 4; 
+        grid-column: 18 / 21;
+      }
     }
   }
   
