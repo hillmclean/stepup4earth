@@ -12,7 +12,7 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-	    	<header class="entry-header">
+	    	<header class="entry-header-about">
 				<div class="about-box" ></div>
 												
 				<div class="top-image1" ></div>
