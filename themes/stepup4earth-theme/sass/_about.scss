@@ -480,7 +480,7 @@
     position: relative;
     z-index: 0;
     @include desktop {
-      padding: 6rem 0.5rem 3.5rem 0.5rem;
+      padding: 6rem 0.5rem 8rem 0.5rem;
     }
     
     p {
@@ -695,7 +695,12 @@
     
 
     .founder3 {
-      padding-top: 3rem;
+      max-width: $desktop;
+      margin: 0 auto;
+      padding-top: 5rem;
+      @include desktop {
+        display: flex;
+      }
       .image-name {
         .founder-image {
           width: 11rem;
@@ -710,7 +715,23 @@
             width: 10rem;
             top: 70px;
             left: 200px;
+            @include desktop {
+              width: 20rem;
+              top: -40px;
+              left: 330px;
+            }
           }
+          p {
+            @include desktop {
+              font-size: 2rem;
+              width: 20rem;
+            }
+          }
+        }
+      }
+      .content {
+        @include desktop {
+          padding: 7rem 1rem 0rem 4rem;
         }
       }
     }
@@ -723,6 +744,9 @@
       height: 3.7rem;
       top: -20px;
       left: 150px;
+      @include desktop {
+        left: 260px;
+      }
     }
 
     .founder3-box2 {
@@ -733,6 +757,26 @@
       height: 16rem;
       top: 95px;
       left: -7px;
+      @include desktop {
+        width: 60rem;
+        height: 20rem;
+        top: 250px;
+        left: -64px;
+      }
+    }
+
+    .founder3-box3 {
+      display: none;
+      @include desktop {
+        display: flex;
+        position: absolute;
+        z-index: -1;
+        background-color:  $color__mint-1;
+        width: 8rem;
+        height: 8rem;
+        top: 460px;
+        left: 860px;
+      }
     }
 
     .founder3-nameline {
@@ -740,9 +784,13 @@
       z-index: 2;
       border-bottom: 2px solid  $color__cyan-4;
       width: 10rem;
-      top: 10px;
       top: 70px;
       left: -90px;
+      @include desktop {
+        width: 20rem;
+        top: 130px;
+        left: -90px;
+      }
     }
   } // end of founders
 

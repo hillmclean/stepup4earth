@@ -171,6 +171,7 @@ get_header(); ?>
 								<div class="founder-image" style="background: url(<?php echo the_sub_field('image3'); ?>); background-size: cover; background-position: center;">
 									<div class="founder3-box1" ></div>
 									<div class="founder3-box2" ></div>
+									<div class="founder3-box3" ></div>
 									<h5 class="founder-name"><div class="founder3-nameline" ></div><?php the_sub_field('name3'); ?></h5>
 								</div>
 							</div> <!-- image-name --> 
