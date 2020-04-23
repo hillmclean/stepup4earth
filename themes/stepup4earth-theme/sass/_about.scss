@@ -589,7 +589,13 @@
     }
 
     .founder2 {
+      max-width: $desktop;
+      margin: 0 auto;
       padding-top: 5rem;
+      @include desktop {
+        display: flex;
+        flex-direction: row-reverse;
+        }
       .image-name {
         display: flex;
         flex-direction: row-reverse;
@@ -606,6 +612,24 @@
             width: 10rem;
             top: 70px;
             left: -180px;
+            @include desktop {
+              top: -10px;
+              left: -230px;
+            }
+          }
+          p {
+            @include desktop {
+              font-size: 2rem;
+              width: 20rem;
+            }
+          }
+        }
+      }
+      .content {
+        @include desktop {
+          padding: 7rem 4rem 0rem 1rem;
+          p {
+          text-align: right;
           }
         }
       }
@@ -619,6 +643,10 @@
       height: 3.7rem;
       top: -30px;
       left: -30px;
+      @include desktop {
+        width: 4.8rem;
+        height: 4.8rem;
+      }
     }
 
     .founder2-nameline {
@@ -628,6 +656,11 @@
       width: 10rem;
       top: 50px;
       left: 65px;
+      @include desktop {
+        width: 13rem;
+        top: 80px;
+        left: 65px;
+      }
     }
 
     .founder2-box2 {
@@ -638,6 +671,26 @@
       height: 39rem;
       top: 90px;
       left: -30px;
+      @include desktop {
+        width: 56rem;
+        height: 20rem;
+        top: 30px;
+        left: -600px;
+      }
+    }
+
+    .founder2-box3 {
+      display: none;
+      @include desktop {
+        position: absolute;
+        display: flex;
+        width: 4rem;
+        height: 4rem;
+        top: 330px;
+        left: -660px;
+        z-index: -1;
+        background-color: $color__green-light-4;
+      }
     }
     
 
