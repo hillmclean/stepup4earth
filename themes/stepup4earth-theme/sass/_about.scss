@@ -553,10 +553,24 @@
       top: 50px;
       left: -7px;
       @include desktop {
-        width: 97rem;
+        width: 60rem;
         height: 20rem;
         top: 90px;
         left: -64px;
+      }
+    }
+
+    .founder1-box3 {
+      display: none;
+      @include desktop {
+        position: absolute;
+        display: flex;
+        width: 8rem;
+        height: 8rem;
+        top: 300px;
+        left: 340px;
+        z-index: -1;
+        background-color: $color__green-5;
       }
     }
 
