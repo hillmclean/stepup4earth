@@ -4,7 +4,8 @@
     const flkty = new Flickity(carousel, {
         hash: true,
         cellAlign: 'left',
-        draggable: false
+		draggable: false,
+		prevNextButtons: false
     });
     function getAttr(arr) {
 	const number = (window.location.href).slice(-1);

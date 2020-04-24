@@ -108,7 +108,7 @@ function stepup4earth_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 	wp_enqueue_style('flickity-css', 'https://unpkg.com/flickity@2/dist/flickity.min.css');
 	
-	if( is_page('ecofair') || is_archive('workshop') || is_archive('volunteer')) {
+	if( is_page('ecofair') || is_home() || is_archive('workshop') || is_archive('volunteer')) {
 	    wp_enqueue_script( 'flickity-js', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array(), false, true );
 	    wp_enqueue_script( 'flickity-hash-js', 'https://unpkg.com/flickity-hash@1/hash.js', array(), false, true );
 	    wp_enqueue_script( 'flickity-start-js', get_template_directory_uri() . '/build/js/start-carousel.min.js', array('flickity-js'), false, true );
