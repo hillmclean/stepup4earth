@@ -10,15 +10,24 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main-resources" role="main">
 
-		<div class="resource-title-container">
-			<h1 class="resources-title">Resources</h1>
-			<h2 class="resources-tagline">Helping you help the earth</h2>
-		</div>
+		<?php if ( have_posts() ) : ?>
+
+			<?php
+				$args = array( 
+					'post_type' => 'post',
+					'posts_per_page' => '-1'
+				);
+				$blog_posts = get_posts( $args ); 
+					?>
 
 			<section class="resource-section">
 
-				<div class="carousel-pagination">
+				<div class="resource-title-container">
+					<h1 class="resources-title">Resources</h1>
+					<h2 class="resources-tagline">Helping you help the earth</h2>
+				</div>
 
+				<div class="carousel-pagination">
 					<div class="carousel-pagination-buttons">
 						<div class="carousel-pagination-prev">
 							<i class="fas fa-arrow-left"></i>
@@ -27,19 +36,12 @@ get_header(); ?>
 							<i class="fas fa-arrow-right"></i>
 						</div>
 					</div>
-
 				</div>
 
+	
 				<div class="carousel">
-
-				<?php
-				$args = array( 
-					'post_type' => 'post',
-					'posts_per_page' => '-1'
-				);
-				$blog_posts = get_posts( $args ); 
-				?>
-
+			
+			
 				<?php foreach($blog_posts as $post): setup_postdata ($post); ?>
 
 					<div class="speakers-carousel-cell">
@@ -54,15 +56,16 @@ get_header(); ?>
 								<h2><?php the_title() ?></h2>
 							</div>
 							</a>
-					</div> <!-- end speaker cell -->
+					</div> 
+					</div> <!-- end of .carousel -->
 				<?php endforeach; ?>
+			
 				<?php wp_reset_postdata(); ?>
+				
+				<?php endif; ?>
+	
 
-
-				</div> <!-- end of .carousel -->
-
-		</section> <!-- end of speaker section --> 
-
+			</section> <!-- end of resource section --> 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
