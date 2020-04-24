@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying product archive pages.
+ * The Template Name: Shop
  *
  * @package StepUp4Earth_Theme
  */
