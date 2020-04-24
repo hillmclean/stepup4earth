@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying community archive pages.
+ * The template for displaying projects archive pages.
  *
  * @package StepUp4Earth_Theme
  */

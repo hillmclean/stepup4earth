@@ -34,6 +34,7 @@ plugins/*
 !plugins/ecofair-sponsors/
 !plugins/contact-form-7/
 !plugins/stepup4earth-products/
+!plugins/stepup4earth-projects/
 # Ignore everything in "themes" except the active theme. #
 # ====================================================== #
 themes/*

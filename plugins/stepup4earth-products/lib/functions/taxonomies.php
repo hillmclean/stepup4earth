@@ -42,7 +42,7 @@ function su4e_product_taxonomy() {
 		'show_tagcloud'              => true,
 		'show_in_rest'               => true,
 	);
-	register_taxonomy( 'product_taxonomy', array( 'product_type' ), $args );
+	register_taxonomy( 'product_taxonomy', array( 'shop' ), $args );
 
 }
 add_action( 'init', 'su4e_product_taxonomy', 0 );
