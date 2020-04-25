@@ -4,24 +4,28 @@
 
 // title //
 .resource-title-container {
-    padding: 5rem 0.5rem 0rem 0.5rem;;
+    padding: 7rem 0.5rem 0rem 0.5rem;;
     width: 95%;
 }
 .resources-title {
     font-size: 1.5rem;
     width: 80%;
-    padding-bottom: 0.5rem;
-    margin-bottom: 0px;
+    padding: 0rem 0rem 0.5rem 0rem;
+    margin: 0px;
 }
 .resources-tagline {
     font-size: 3.5rem;
-    margin-top: 0px;
+    margin: 0px;
 }
 
 //carousel //
 .news-img {
     height: 226px;
-    width: 226px;
+	width: 226px;
+	h2 {
+		position: absolute;
+		top: 220px;
+	}
 }
 .news-title {
 	h2 {
@@ -31,8 +35,8 @@
 
 .resources-carousel-cell {
 	display: flex;
-	
-    margin: 0.5rem;
+	margin: 0.5rem;
+	height: 400px;
     p {
 	margin: 0px;
 	font-size: 1rem;
@@ -75,6 +79,9 @@
 	height: 76px;
     }
     .carousel {
+		.flickity-viewport {
+			height: 300px;
+		}
 	.flickity-page-dots {
 	    display: none;
 	}

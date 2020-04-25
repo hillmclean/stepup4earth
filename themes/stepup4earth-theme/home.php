@@ -44,7 +44,7 @@ get_header(); ?>
 			
 				<?php foreach($blog_posts as $post): setup_postdata ($post); ?>
 
-					<div class="speakers-carousel-cell">
+					<div class="resources-carousel-cell">
 						<?php if ( has_post_thumbnail() ) {
 							$newsImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "full");
 							}  
@@ -59,9 +59,7 @@ get_header(); ?>
 					</div> 
 					</div> <!-- end of .carousel -->
 				<?php endforeach; ?>
-			
-				<?php wp_reset_postdata(); ?>
-				
+				<?php wp_reset_postdata(); ?>	
 				<?php endif; ?>
 	
 
