@@ -4,21 +4,27 @@
 
 // title //
 .resource-title-container {
-    padding: 7rem 0.5rem 0rem 0.5rem;;
-    width: 95%;
+	padding: 7rem 0.5rem 0rem 0.5rem;
+	width: 95%;
+	@include desktop {
+		padding: 7rem 0.5rem 0rem 10rem;
+	}
 }
 .resources-title {
     font-size: 1.5rem;
     width: 80%;
     padding: 0rem 0rem 0.5rem 0rem;
 	margin: 0px;
-	@include tablet {
-		width: 60%;
-	}
 }
 .resources-tagline {
     font-size: 3.5rem;
-    margin: 0px;
+	margin: 0px;
+	@include tablet {
+		width: 60%;
+	}
+	@include desktop{
+		width: 30rem;
+	}
 }
 
 //carousel //
@@ -102,15 +108,22 @@
 	padding-bottom: 3rem;
 	fieldset {
 		border: none;
+		@include desktop {
+			padding-left: 10rem;
+		}
 	}
 	label {
 		display: flex;
 		@include tablet {
 			width: 60%;
 		}
+		@include desktop{
+			width: 45%;
+		}
 	}
 	button {
 		margin-left: 1rem;
+		border: none;
 		.fa-search {
 			color: white;
 			}
