@@ -69,7 +69,7 @@ get_header(); ?>
 					
 					<fieldset>
 						<label>
-							<input id="search-display" type="search" class="search-field" placeholder="Type and hit enter ..." value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search for:" />
+							<input id="search-display" type="search" class="search-field" placeholder="Search..." value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search for:" />
 							<button class="search-submit">
 								<i class="fa fa-search"></i>
 							</button>
