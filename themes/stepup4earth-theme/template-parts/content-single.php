@@ -18,17 +18,17 @@
 		<div class="single-page-box2"></div>
 		<div class="single-page-box3"></div>
 		<div class="single-page-box4"></div>
-		<div class="single-post-title">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		</div>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php stepup4earth_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
 
 	</header><!-- .entry-header -->
+
+	<div class="single-post-header-text">
+				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				<?php if ( 'post' === get_post_type() ) : ?>
+			<div class="entry-meta">
+				<?php stepup4earth_posted_on(); ?>
+			</div><!-- .entry-meta -->
+		<?php endif; ?>
+		</div>
 
 	
 	
