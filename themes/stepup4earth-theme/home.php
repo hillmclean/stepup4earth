@@ -49,32 +49,34 @@ get_header(); ?>
 							$newsImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "full");
 							}  
 							?>
-			
-							<div class="news-img" style="background: url('<?php echo $newsImg[0]; ?>') no-repeat; background-size: cover;">
+							<a href="<?php the_permalink()?>">
+							<div class="news-img" style="background: url('<?php echo $newsImg[0]; ?>') no-repeat; background-size: cover; background-position: center;"></div>
 							<div class="news-title">
-								<a href="<?php the_permalink()?>">
 								<h2><?php the_title() ?></h2>
 							</div>
 							</a>
 					</div> 
-					</div> <!-- end of .carousel -->
 				<?php endforeach; ?>
 				<?php wp_reset_postdata(); ?>	
+				</div> <!-- end of .carousel -->
 				<?php endif; ?>
 
 	
 
 			</section> <!-- end of resource section --> 
-			<button class="search-submit"><i class="fa fa-search"></i></button>
+
 					<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
 					
 					<fieldset>
 						<label>
-
-								<input id="search-display" type="search" class="search-field" placeholder="Type and hit enter ..." value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search for:" />
+							<input id="search-display" type="search" class="search-field" placeholder="Type and hit enter ..." value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search for:" />
+							<button class="search-submit">
+								<i class="fa fa-search"></i>
+							</button>
 						</label>
 					</fieldset>
-						</form>
+				</form>
+		
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

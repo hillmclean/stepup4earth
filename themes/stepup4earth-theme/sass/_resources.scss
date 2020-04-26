@@ -22,10 +22,6 @@
 .news-img {
     height: 226px;
 	width: 226px;
-	h2 {
-		position: absolute;
-		top: 220px;
-	}
 }
 .news-title {
 	h2 {
@@ -35,12 +31,20 @@
 
 .resources-carousel-cell {
 	display: flex;
+	flex-direction: column;
 	margin: 0.5rem;
 	height: 350px;
     p {
 	margin: 0px;
 	font-size: 1rem;
-    }
+	}
+	a {
+		text-decoration: none;
+		color: black;
+		&:hover {
+			color: $color__green-1;
+		}
+	}
 }
 
 .resource-section {
@@ -91,3 +95,21 @@
     }
 }
 
+.search-form {
+	fieldset {
+		border: none;
+	}
+	label {
+		display: flex;
+	}
+	button {
+		margin-left: 1rem;
+		.fa-search {
+			color: white;
+			}
+	}
+	input {
+		padding: .7rem;
+		border: none;
+	}
+}
