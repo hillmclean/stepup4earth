@@ -9,11 +9,11 @@
 
 <article class="single-post-main" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header-res-single">
-		<div class="single-thumbnail">
-			<?php if ( has_post_thumbnail() ) : ?>
-				<?php the_post_thumbnail( 'large' ); ?>
-			<?php endif; ?>
-		</div>
+		<?php if ( has_post_thumbnail() ) {
+			$newsImg1 = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "full");
+			}  
+			?>
+		<div class="single-thumbnail" style="background: url('<?php echo $newsImg1[0]; ?>') no-repeat; background-size: cover; background-position: center;"></div>
 		<div class="single-page-box1"></div>
 		<div class="single-page-box2"></div>
 		<div class="single-page-box3"></div>

@@ -151,6 +151,8 @@
 		width: 20rem;
 	}
 	.entry-footer {
+		display: flex;
+		flex-direction: column;
 		padding: 1rem;
 	}
 }
