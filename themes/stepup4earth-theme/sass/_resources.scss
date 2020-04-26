@@ -141,6 +141,15 @@
 	.entry-content {
 		padding: 0rem 1rem 2rem 1rem;
 	}
+	.entry-meta {
+		grid-row: 4 / 5;
+		grid-column: 1 / 3;
+		border-bottom: 2px solid $color__green-1;
+		align-self: center;
+		padding: 0rem 1rem 2rem 0rem;
+		margin-left: 1rem;
+		width: 20rem;
+	}
 	.entry-footer {
 		padding: 1rem;
 	}
@@ -170,15 +179,6 @@
 	grid-row: 3 / 4;
 	grid-column: 1 / 3;
 	padding-left: 1rem;
-}
-.single-entry-meta {
-	grid-row: 4 / 5;
-	grid-column: 1 / 3;
-	border-bottom: 2px solid $color__green-1;
-    align-self: center;
-	padding: 0rem 1rem 2rem 0rem;
-	margin-left: 1rem;
-    width: 20rem;
 }
 
 .single-page-box1 {

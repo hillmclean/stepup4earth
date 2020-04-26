@@ -21,11 +21,17 @@
 		<div class="single-post-title">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</div>
-		<div class="single-entry-meta">
+
+		<?php if ( 'post' === get_post_type() ) : ?>
+		<div class="entry-meta">
 			<?php stepup4earth_posted_on(); ?>
 		</div><!-- .entry-meta -->
+		<?php endif; ?>
+
 	</header><!-- .entry-header -->
 
+	
+	
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
@@ -39,7 +45,7 @@
 	<div class="resource-nav">
 		<?php the_post_navigation(); ?>
 	</div>
-
+	
 	<footer class="entry-footer">
 		<?php stepup4earth_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
