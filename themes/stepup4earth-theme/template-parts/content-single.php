@@ -22,7 +22,7 @@
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</div>
 		<div class="single-entry-meta">
-			<?php stepup4earth_posted_on(); ?> / <?php stepup4earth_comment_count(); ?> / <?php stepup4earth_posted_by(); ?>
+			<?php stepup4earth_posted_on(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
@@ -34,9 +34,11 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
 
-	<?php the_post_navigation(); ?>
+	</div><!-- .entry-content -->
+	<div class="resource-nav">
+		<?php the_post_navigation(); ?>
+	</div>
 
 	<footer class="entry-footer">
 		<?php stepup4earth_entry_footer(); ?>
