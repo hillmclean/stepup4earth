@@ -61,9 +61,20 @@ get_header(); ?>
 				<?php endforeach; ?>
 				<?php wp_reset_postdata(); ?>	
 				<?php endif; ?>
+
 	
 
 			</section> <!-- end of resource section --> 
+			<button class="search-submit"><i class="fa fa-search"></i></button>
+					<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+					
+					<fieldset>
+						<label>
+
+								<input id="search-display" type="search" class="search-field" placeholder="Type and hit enter ..." value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search for:" />
+						</label>
+					</fieldset>
+						</form>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

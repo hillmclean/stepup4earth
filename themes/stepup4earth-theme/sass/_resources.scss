@@ -36,7 +36,7 @@
 .resources-carousel-cell {
 	display: flex;
 	margin: 0.5rem;
-	height: 400px;
+	height: 350px;
     p {
 	margin: 0px;
 	font-size: 1rem;
@@ -44,7 +44,7 @@
 }
 
 .resource-section {
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
     .carousel-pagination-buttons {
 	display: flex;
 	@include desktop {
@@ -90,3 +90,4 @@
 	}
     }
 }
+
