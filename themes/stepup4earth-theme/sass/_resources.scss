@@ -140,6 +140,9 @@
 	background-color: $color__background-green;
 	.entry-content {
 		padding: 0rem 1rem 2rem 1rem;
+		a {
+			color: $color__green-1
+		}
 	}
 	.entry-meta {
 		grid-row: 4 / 5;
@@ -209,4 +212,18 @@
 
 .resource-nav {
 	padding: 1rem;
+	a {
+		text-decoration: none;
+		color: $color__green-1;
+	}
+	.nav-next {
+		a {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;;
+		}
+	}
+	.nav-prev-style {
+		font-family: 'montserratbold', sans-serif;
+	}
 }
