@@ -13,22 +13,23 @@
 			$newsImg1 = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "full");
 			}  
 			?>
+		<div class="bkgd-box1"></div>
 		<div class="single-thumbnail" style="background: url('<?php echo $newsImg1[0]; ?>') no-repeat; background-size: cover; background-position: center;"></div>
 		<div class="single-page-box1"></div>
 		<div class="single-page-box2"></div>
 		<div class="single-page-box3"></div>
 		<div class="single-page-box4"></div>
-
-	</header><!-- .entry-header -->
-
-	<div class="single-post-header-text">
+		<div class="single-post-header-text">
 				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 				<?php if ( 'post' === get_post_type() ) : ?>
 			<div class="entry-meta">
 				<?php stepup4earth_posted_on(); ?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
-		</div>
+	</div>
+
+
+	</header><!-- .entry-header -->
 
 	
 	
@@ -40,7 +41,6 @@
 				'after'  => '</div>',
 			) );
 		?>
-
 	</div><!-- .entry-content -->
 	<div class="resource-nav">
 		<?php the_post_navigation(); ?>
