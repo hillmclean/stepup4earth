@@ -13,7 +13,7 @@
 			$newsImg1 = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "full");
 			}  
 			?>
-		<div class="bkgd-box1"></div>
+		<!-- <div class="bkgd-box1"></div> -->
 		<div class="single-thumbnail" style="background: url('<?php echo $newsImg1[0]; ?>') no-repeat; background-size: cover; background-position: center;"></div>
 		<div class="single-page-box1"></div>
 		<div class="single-page-box2"></div>
