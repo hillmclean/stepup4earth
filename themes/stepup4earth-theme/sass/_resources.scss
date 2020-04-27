@@ -189,38 +189,19 @@
 	grid-template-columns: 2fr 1fr;
 	padding: 9rem 0rem 2rem .5rem;
 	width: 23rem;
-	margin: 0 auto;
 	// position: relative;
 	@include tablet {
 		grid-template-rows: .3fr 1fr 0.5fr;
 		padding: 9rem 1rem 0rem 1rem;
 	}
 	@include desktop {
-		grid-template-columns: 58vh 20vh 20vh 20vh 20vh;
+		grid-template-columns: repeat (5, 1fr);
 		grid-template-rows: .3fr 1fr 1fr;
-		width: 100%;
-		max-width: 1920px;
+		width: $desktop;
+		max-width: $desktop;
 		margin: 0 auto;
 	}
 }
-
-// .bkgd-box1 {
-// 	background-color: #d9eee6;
-//     width: 86%;
-//     height: 79vh;
-//     position: absolute;
-//     top: 60px;
-// 	left: 0px;
-// 	@include tablet {
-// 		width: 168%;
-//     	height: 89vh;
-// 	}
-// 	@include desktop {
-// 		width: 90%;
-// 		left: -30px;
-// 	}
-
-// }
 
 .single-thumbnail {
 	grid-row: 1 / 3;
@@ -238,6 +219,7 @@
 		grid-column: 1 / 2;
 		height: 58vh;
 		width: 58vh;
+		align-self: flex-end;
 	}
 }
 .single-post-header-text {
