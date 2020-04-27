@@ -183,15 +183,23 @@
 	padding: 9rem 1rem 2rem 1rem;
 	width: 23rem;
 	position: relative;
+	@include tablet {
+		grid-template-rows: .3fr 1fr 0.5fr;
+		padding: 9rem 1rem 0rem 1rem;
+	}
 }
 
 .bkgd-box1 {
 	background-color: #d9eee6;
-    width: 82%;
+    width: 86%;
     height: 79vh;
     position: absolute;
     top: 60px;
 	left: 0px;
+	@include tablet {
+		width: 138%;
+    	height: 89vh;
+	}
 
 }
 
@@ -202,6 +210,10 @@
 	width: 30vh;
 	align-self: flex-start;
 	z-index: 1;
+	@include tablet {
+		height: 50vh;
+		width: 50vh;
+	}
 }
 .single-post-header-text {
 	width: 95%;
@@ -223,6 +235,10 @@
 	height: 6vh;
 	align-self: flex-start;
 	z-index: 1;
+	@include tablet {
+		width: 10vh;
+		height: 10vh;
+	}
 }
 
 .single-page-box2 {
@@ -233,6 +249,10 @@
     height: 12vh;
 	align-self: flex-start;
 	z-index: 1;
+	@include tablet {
+		width: 20vh;
+		height: 20vh;
+	}
 }
 .single-page-box3 {
 	display: none;
