@@ -52,12 +52,12 @@ get_header(); ?>
 			 
 		<div class="product-item">
 			<?php if( get_field('image_link') ): ?>
-				<a href="<?php the_permalink()?>">
+				<a href="<?php the_field('link'); ?>">
 					<div class="product-img-box" style="background: url('<?php echo the_field('image_link'); ?>') no-repeat; background-size: cover;" >
 					</div> 
 				</a>
 				<?php else : ?>
-				<a href="<?php the_permalink()?>">
+				<a href="<?php the_field('link'); ?>">
 					<div class="product-img-box" style="background: url('<?php echo the_field('image'); ?>') no-repeat; background-size: cover;" >	
 					
 					<?php endif; ?>	
