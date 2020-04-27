@@ -79,11 +79,75 @@ Front Page
 	@include desktop {
 		grid-gap: 1rem;
 		grid-template-columns: repeat(20, 1fr);
-		grid-template-rows: 1fr 1.5fr .5fr;
+		grid-template-rows: 176px  150px  176px 80px;
 		max-width: 1920px;
-		padding-top: 10rem;
+		// padding-top: 10rem;
 		padding-bottom: 0rem;
 		margin: 0 auto;
+		}
+
+		.front-banner-img {
+			background-image: url(../assets/images/heroimage01.jpeg);
+			background-size: cover;
+			background-position: right;
+			grid-column: 2 / 4;
+			grid-row: 1 / 4;
+			width: 100%;
+			z-index: 2;
+		
+			@include tablet {
+				grid-column: 1 / 5;
+				grid-row: 2 / 4;
+			}  
+		
+			@include desktop {
+				grid-column: 1 / 5;
+				grid-row: 2 / 5;
+			}  
+		}
+
+		.hero-img-2 {
+			grid-column: 1 / 4;
+			grid-row: 5 / 6;
+			background-image: url(../assets/images/heroimage02.jpeg);
+			background-size: cover;
+			background-position: right;
+			// height: 351px;
+			width: 100%;
+			margin: 1rem 0rem 3rem 0rem;
+			z-index: 1;
+
+			@include tablet {
+				grid-column: 12 / 17;
+				grid-row: 1 / 4;
+				// height: 500px;
+				margin: 0px;
+			}  
+
+			@include desktop {
+				grid-column: 9 / 17;
+				width: 90%;
+				justify-self: right;
+				height: 100%;
+				grid-row: 1 / 5;
+			}  
+		}
+
+		.hero-img-3 {
+			display: none;
+
+			@include desktop {
+				background-image: url(../assets/images/heroimage03.png);
+				background-size: cover;
+				background-position: right;
+				display: grid;
+				grid-column: 17 / 21;
+				grid-row: 1 / 3;
+				width: 100%;
+				margin: 0px;
+				z-index: 2;
+				height: 100%;
+			}  
 		}
 }
 
@@ -107,7 +171,7 @@ Front Page
 	  @include desktop {
 			grid-column: 13 / 21;
 			width: 100%;
-			height: 1081px;
+			height: 900px;
 			top: -207px;
 		}
 	}
@@ -126,7 +190,7 @@ Front Page
   
 	@include desktop {
 		  display:grid;
-		  grid-column: 18 / 20;
+		  grid-column: 17 / 20;
 		  grid-row: 4 / 5;
 		  z-index: 2;
 	  }
@@ -166,6 +230,10 @@ Front Page
 		  border-radius: 1px;
 		  margin-bottom: 10px;
 	  } 
+  }
+
+  .front-page-footer {
+	  padding-left: 1rem;
   }
 
 

@@ -52,5 +52,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-
+	<div class="front-page-footer">
+		<p class="rights-reserved" >© 2020 STEP UP 4 EARTH, ALL RIGHTS RESERVED.</p>
+	</div><!-- .site-footer -->
 <?php wp_footer(); ?>
