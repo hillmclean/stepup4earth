@@ -24,7 +24,7 @@ Front Page
 	width: 100%;
 
   @include tablet {
-	grid-column: 5 / 9;
+	grid-column: 5 / 12;
 	grid-row: 2 / 4;
   }
 
@@ -72,7 +72,7 @@ Front Page
 	@include tablet {
 		grid-gap: 1rem;
 		grid-template-columns: repeat(16, 1fr);
-		grid-template-rows: .25fr 1.5fr .25fr;
+		grid-template-rows: 8.125rem 25rem 5rem;
 		width: 100%;
 		}
 
