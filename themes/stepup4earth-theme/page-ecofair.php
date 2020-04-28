@@ -26,7 +26,6 @@ get_header(); ?>
 
 				<div class="event-info">
 
-					<h1 class="site-title-heading">Step Up 4 Earth</h1>
 					<h2 class="event-title"><?php the_field('name_of_event'); ?></h2>
 
 					<div class="event-info-li"></div>
