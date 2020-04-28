@@ -27,6 +27,9 @@ Front Page
 	grid-column: 5 / 12;
 	grid-row: 2 / 4;
   }
+  @include tablet {
+	grid-column: 5 / 10;
+  }
 
   .site-title-heading  {
 	font-size: 4.5rem;
