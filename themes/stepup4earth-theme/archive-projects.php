@@ -12,6 +12,14 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
+			<?php
+				$args = array( 
+					'post_type' => 'post',
+					'posts_per_page' => '1'
+				);
+				$projects = get_posts( $args ); 
+					?>
+
 			<header class="page-header-archive">
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
