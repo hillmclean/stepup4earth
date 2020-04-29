@@ -9,6 +9,7 @@ get_header(); ?>
 	<div class="background-green-box"></div>
 	<div class="background-grey-box"></div>
 	<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
 
 
 		<header class="shop-header">
@@ -41,8 +42,8 @@ get_header(); ?>
 	$args = array( 
 		'post_type' => 'shop',
 		'posts_per_page' => 16,
-		'orderby'         => 'title',
-		'order' => 'ASC'
+		'orderby' => 'title',
+		'order' => 'DES'
 	);
 	$products = new WP_Query($args);
 	?>
@@ -50,27 +51,21 @@ get_header(); ?>
 	<div class="product-grid">
 		<?php if ( $products->have_posts() ) : ?>
 	 	<?php while ( $products->have_posts() ) : $products->the_post(); ?>
-			 
-		<div class="product-item">
+		
+			<div class="product-item">
 			<?php if( get_field('image_link') ): ?>
 				<a href="<?php the_field('link'); ?>">
-					<div class="product-img-box" style="background: url('<?php echo the_field('image_link'); ?>') no-repeat; background-size: cover;" >
+					<div class="product-img-box" style="background: url('<?php echo the_field('image_link'); ?>') no-repeat; background-size: contain; background-position: center;" >
+					<?php endif; ?>	
 					</div> 
 				</a>
-				<?php else : ?>
-				<a href="<?php the_field('link'); ?>">
-					<div class="product-img-box" style="background: url('<?php echo the_field('image'); ?>') no-repeat; background-size: cover;" >	
-					
-					<?php endif; ?>	
+
+				<div class="product-info-box">
+					<p class="product-title"><?php the_title(); ?></p>
+					<p class="product-retailer"><?php the_field('seller'); ?></p>
 				</div> 
-				</a>
-
-			<div class="product-info-box">
-				<p class="product-title"><?php the_title(); ?></p>
-				<!-- <p class="product-price">$ <?php the_field('price'); ?></p> -->
-			</div> 
 		</div> <!-- .product-item -->
-
+	
 		<?php endwhile; ?>
 		<?php wp_reset_postdata(); ?>
 		<?php endif;?>
