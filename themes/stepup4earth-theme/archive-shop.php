@@ -39,12 +39,16 @@ get_header(); ?>
 <!-- Product Grid -->
 
 <?php
+$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
 	$args = array( 
 		'post_type' => 'shop',
-		'posts_per_page' => 16,
+		'posts_per_page' => 12,
 		'orderby' => 'title',
-		'order' => 'DES'
-	);
+		'order' => 'ASC',
+		'paged' => $paged
+
+	); 
 	$products = new WP_Query($args);
 	?>
 
@@ -67,8 +71,23 @@ get_header(); ?>
 		</div> <!-- .product-item -->
 	
 		<?php endwhile; ?>
-		<?php wp_reset_postdata(); ?>
 		<?php endif;?>
+
+		<nav class="pagination">
+     <?php
+     $big = 999999999;
+     echo paginate_links( array(
+          'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+          'format' => '?paged=%#%',
+          'current' => max( 1, get_query_var('paged') ),
+          'total' => $products->max_num_pages,
+          'prev_text' => '&laquo;',
+          'next_text' => '&raquo;'
+     ) );
+?>
+</nav>
+<?php wp_reset_postdata(); ?>
+
 	
 	</div> <!-- .product-grid -->
 
