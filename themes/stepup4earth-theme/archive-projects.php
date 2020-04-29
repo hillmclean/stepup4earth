@@ -24,7 +24,7 @@ get_header(); ?>
 			<div class='workshops-container'>
 			<?php foreach ( $projects_page as $post ) : setup_postdata( $post ); ?>
 			<header class="page-header-content">
-			<div class="workshop-page-content">
+			<div class="projects-page-content">
 					<h2><?php the_title(); ?></h2>
 					<?php the_content(); ?>
 				    </div>

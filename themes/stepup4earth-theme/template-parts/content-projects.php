@@ -7,10 +7,10 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('workshop-no-owner'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('projects-article'); ?>>
 
-		<div class="workshop-title-image" style="background: url('<?php the_field('image_1') ?>') no-repeat; background-size: cover; background-position: center;"></div>
-		<div class="workshop-secondary-image" style="background-image: url(<?php echo get_field("image_2") ?>)"></div>
+		<div class="projects-title-image" style="background: url('<?php the_field('image_1') ?>') no-repeat; background-size: cover; background-position: center;"></div>
+		<div class="projects-secondary-image" style="background-image: url(<?php echo get_field("image_2") ?>)"></div>
 	
  
 	<header class="entry-header">
