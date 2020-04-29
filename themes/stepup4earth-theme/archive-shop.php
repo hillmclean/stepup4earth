@@ -41,6 +41,7 @@ get_header(); ?>
 	$args = array( 
 		'post_type' => 'shop',
 		'posts_per_page' => 16,
+		'orderby'         => 'title',
 		'order' => 'ASC'
 	);
 	$products = new WP_Query($args);
