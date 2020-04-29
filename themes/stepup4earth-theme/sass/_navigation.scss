@@ -10,6 +10,8 @@ html {
 
 a {
 	color: $color__link;
+	font-family: $font__bold;
+	text-decoration: none;
 	&:hover,
 	&:focus,
 	&:active {

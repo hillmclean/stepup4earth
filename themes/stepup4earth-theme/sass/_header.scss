@@ -55,7 +55,8 @@
 	    transition-timing-function: ease-in-out;
 	    transition-property: all;
 	    transition-duration: .1s;
-	    margin: 1.4rem;
+		margin: 1.4rem;
+		font-family: $font__main;
 	    @include desktop {
 		margin: 1.4rem;
 	    }
@@ -106,9 +107,4 @@
 	}
     }
 }
-.simple-banner {
-.simple-banner-text {
-	padding: 1px;
-	font-size: 1rem;
-	}
-}
+
