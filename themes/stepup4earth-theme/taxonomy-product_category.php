@@ -22,19 +22,25 @@ get_header(); ?>
 
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
-	$args = array( 
-		'post_type' => 'shop',
-		'orderby' => 'title',
-		'order' => 'ASC',
-		'paged' => $paged
-
-	); 
-	$product_category = new WP_Query($args);
+$args = array(
+	'post_type' => 'shop', // the post type
+	'posts_per_page' => 4,
+	'orderby' => 'title',
+	'order' => 'ASC',
+	'tax_query' => array(
+		array(
+			'taxonomy' => 'product_category', //or tag or custom taxonomy
+            'field' => 'slug', 
+			'terms' => $product_category
+		),
+	),
+);
+	$product_tax = new WP_Query($args);
 	?>
 		
 <div class="product-grid">
-<?php if ( $product_category->have_posts() ) : ?>
-	 	<?php while ( $product_category->have_posts() ) : $product_category->the_post(); ?>
+<?php if ( $product_tax->have_posts() ) : ?>
+	 	<?php while ( $product_tax->have_posts() ) : $product_tax->the_post(); ?>
 		 
 		<div class="product-item">
 			<?php if( get_field('image_link') ): ?>
@@ -61,7 +67,7 @@ $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
           'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
           'format' => '?paged=%#%',
           'current' => max( 1, get_query_var('paged') ),
-          'total' => $product_category->max_num_pages,
+          'total' => $product_tax->max_num_pages,
           'prev_text' => '&laquo;',
           'next_text' => '&raquo;'
      ) );

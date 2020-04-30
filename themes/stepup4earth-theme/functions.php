@@ -205,11 +205,11 @@ function my_theme_archive_title( $title ) {
 
 add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
 
-function wpse214084_max_post_queries( $query ) {
+// function wpse214084_max_post_queries( $query ) {
 
-	if(is_tax('product_category')){ // change genre into your taxonomy or leave out for all
-	  // show 20 posts
-	  $query->set('posts_per_page', 5);
-	}
- }
- add_action( 'pre_get_posts', 'wpse214084_max_post_queries' );
+// 	if(is_tax('product_category')){ // change genre into your taxonomy or leave out for all
+// 	  // show 20 posts
+// 	  $query->set('posts_per_page', 5);
+// 	}
+//  }
+//  add_action( 'pre_get_posts', 'wpse214084_max_post_queries' );
