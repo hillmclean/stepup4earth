@@ -24,18 +24,17 @@ $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
 	$args = array( 
 		'post_type' => 'shop',
-		'posts_per_page' => 4,
 		'orderby' => 'title',
 		'order' => 'ASC',
 		'paged' => $paged
 
 	); 
-	$products = new WP_Query($args);
+	$product_category = new WP_Query($args);
 	?>
 		
 <div class="product-grid">
-		<?php if ( have_posts() ) : ?>
-		 <?php while ( have_posts() ) : the_post(); ?>
+<?php if ( $product_category->have_posts() ) : ?>
+	 	<?php while ( $product_category->have_posts() ) : $product_category->the_post(); ?>
 		 
 		<div class="product-item">
 			<?php if( get_field('image_link') ): ?>
@@ -62,7 +61,7 @@ $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
           'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
           'format' => '?paged=%#%',
           'current' => max( 1, get_query_var('paged') ),
-          'total' => $products->max_num_pages,
+          'total' => $product_category->max_num_pages,
           'prev_text' => '&laquo;',
           'next_text' => '&raquo;'
      ) );
