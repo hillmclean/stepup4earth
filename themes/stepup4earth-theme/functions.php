@@ -52,10 +52,10 @@ add_action( 'after_setup_theme', 'stepup4earth_content_width', 0 );
 function pagination($pages = '', $range = 4)
 {  
      $showitems = ($range * 2)+1;  
- 
+
      global $paged;
      if(empty($paged)) $paged = 1;
- 
+
      if($pages == '')
      {
          global $wp_query;
@@ -65,13 +65,13 @@ function pagination($pages = '', $range = 4)
              $pages = 1;
          }
      }   
- 
+
      if(1 != $pages)
      {
          echo "<div class=\"pagination\"><span>Page ".$paged." of ".$pages."</span>";
          if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<a href='".get_pagenum_link(1)."'>&laquo; First</a>";
          if($paged > 1 && $showitems < $pages) echo "<a href='".get_pagenum_link($paged - 1)."'>&lsaquo; Previous</a>";
- 
+
          for ($i=1; $i <= $pages; $i++)
          {
              if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
@@ -79,12 +79,15 @@ function pagination($pages = '', $range = 4)
                  echo ($paged == $i)? "<span class=\"current\">".$i."</span>":"<a href='".get_pagenum_link($i)."' class=\"inactive\">".$i."</a>";
              }
          }
- 
+
          if ($paged < $pages && $showitems < $pages) echo "<a href=\"".get_pagenum_link($paged + 1)."\">Next &rsaquo;</a>";  
          if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($pages)."'>Last &raquo;</a>";
          echo "</div>\n";
      }
 }
+
+
+
 
 /**
  * Register widget area.
@@ -183,3 +186,21 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+function my_theme_archive_title( $title ) {
+	if ( is_category() ) {
+			$title = single_cat_title();
+	} elseif ( is_tag() ) {
+			$title = single_tag_title();
+	} elseif ( is_author() ) {
+			$title = '<span class="vcard">' . get_the_author() . '</span>';
+	} elseif ( is_post_type_archive() ) {
+			$title = post_type_archive_title();
+	} elseif ( is_tax() ) {
+			$title = single_term_title();
+	}
+
+	return $title;
+}
+
+add_filter( 'get_the_archive_title', 'my_theme_archive_title' );

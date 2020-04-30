@@ -8,12 +8,12 @@
 // Add your custom taxonomies here...
 
 // Register Custom Taxonomy
-function su4e_product_taxonomy() {
+function su4e_product_category() {
 
 	$labels = array(
-		'name'                       => _x( 'Product Taxonomies', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Product Taxonomy', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Product Taxonomy', 'text_domain' ),
+		'name'                       => _x( 'Product Categories', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Product Category', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Product Category', 'text_domain' ),
 		'all_items'                  => __( 'All Items', 'text_domain' ),
 		'parent_item'                => __( 'Parent Item', 'text_domain' ),
 		'parent_item_colon'          => __( 'Parent Item:', 'text_domain' ),
@@ -42,7 +42,7 @@ function su4e_product_taxonomy() {
 		'show_tagcloud'              => true,
 		'show_in_rest'               => true,
 	);
-	register_taxonomy( 'product_taxonomy', array( 'shop' ), $args );
+	register_taxonomy( 'product_category', array( 'shop' ), $args );
 
 }
-add_action( 'init', 'su4e_product_taxonomy', 0 );
+add_action( 'init', 'su4e_product_category', 0 );

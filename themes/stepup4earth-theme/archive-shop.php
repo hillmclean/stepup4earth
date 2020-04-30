@@ -16,7 +16,7 @@ get_header(); ?>
 				<h1 class="shop-header-text">Shop Stuff</h1>
 
 				<?php $terms = get_terms( array(
-					'taxonomy'=>'product_taxonomy',
+					'taxonomy'=>'product_category',
 					'hide_empty' => 0,
 				));
 				if (! empty($terms) && ! is_wp_error($terms)) :
