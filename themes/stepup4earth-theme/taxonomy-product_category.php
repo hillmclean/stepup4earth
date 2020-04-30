@@ -17,63 +17,60 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 			
-			<?php
-
-
-$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-
-$args = array(
-	'post_type' => 'shop', // the post type
-	'posts_per_page' => 4,
-	'orderby' => 'title',
-	'order' => 'ASC',
-	'tax_query' => array(
-		array(
-			'taxonomy' => 'product_category', //or tag or custom taxonomy
-            'field' => 'slug', 
-			'terms' => $product_category
-		),
-	),
-);
-	$product_tax = new WP_Query($args);
-	?>
+		<?php
+			$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+			$args = array(
+				'post_type' => 'shop', // the post type
+				'posts_per_page' => 8,
+				'orderby' => 'title',
+				'order' => 'ASC',
+				'paged' => $paged,
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'product_category', //or tag or custom taxonomy
+						'field' => 'slug', 
+						'terms' => $product_category
+					),
+				),
+			);
+			$product_tax = new WP_Query($args); ?>
 		
-<div class="product-grid">
-<?php if ( $product_tax->have_posts() ) : ?>
-	 	<?php while ( $product_tax->have_posts() ) : $product_tax->the_post(); ?>
+		<div class="product-grid">
+		<?php if ( $product_tax->have_posts() ) : ?>
+	 		<?php while ( $product_tax->have_posts() ) : $product_tax->the_post(); ?>
 		 
-		<div class="product-item">
-			<?php if( get_field('image_link') ): ?>
-				<a href="<?php the_permalink()?>" <?php the_title(); ?>>
-					<div class="product-img-box" style="background: url('<?php echo the_field('image_link'); ?>') no-repeat; background-size: cover;" >
-			<?php endif; ?>	
-					</div> 
-				</a>
+			<div class="product-item">
+				<?php if( get_field('image_link') ): ?>
+					<a href="<?php the_permalink()?>" <?php the_title(); ?>>
+						<div class="product-img-box" style="background: url('<?php echo the_field('image_link'); ?>') no-repeat; background-size: cover;" >
+				<?php endif; ?>	
+						</div> 
+					</a>
 
-			<div class="product-info-box">
-				<p class="product-title"><?php the_title(); ?></p>
-				<p class="product-price">$ <?php the_field('price'); ?></p>
-			</div> 
+				<div class="product-info-box">
+					<p class="product-title"><?php the_title(); ?></p>
+					<p class="product-price">$ <?php the_field('price'); ?></p>
+				</div> 
 
-		</div> <!-- .product-item -->
+			</div> <!-- .product-item -->
 
-		<?php endwhile; ?>
+			<?php endwhile; ?>
 		<?php endif;?>
 
 		<nav class="pagination">
-     <?php
-     $big = 999999999;
-     echo paginate_links( array(
-          'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
-          'format' => '?paged=%#%',
-          'current' => max( 1, get_query_var('paged') ),
-          'total' => $product_tax->max_num_pages,
-          'prev_text' => '&laquo;',
-          'next_text' => '&raquo;'
-     ) );
-?>
-</nav>
-<?php wp_reset_postdata(); ?>
+			<?php
+			$big = 999999999;
+			echo paginate_links( array(
+				'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+				'format' => '?paged=%#%',
+				'current' => max( 1, get_query_var('paged') ),
+				'total' => $product_tax->max_num_pages,
+				'prev_text' => '&laquo;',
+				'next_text' => '&raquo;'
+			) );
+			?>
+		</nav>
+	<?php wp_reset_postdata(); ?>
 
 	
 	</div> <!-- .product-grid -->
