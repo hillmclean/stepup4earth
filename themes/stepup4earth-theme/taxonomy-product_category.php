@@ -14,6 +14,25 @@ get_header(); ?>
 			<h1><?php get_the_archive_title()?></h1>
 			<div class="taxonomy-description"><?php the_archive_description() ?>
 			</div>
+
+
+			<?php $terms = get_terms( array(
+					'taxonomy'=>'product_category',
+					'hide_empty' => 0,
+				));
+				if (! empty($terms) && ! is_wp_error($terms)) :
+				?>
+				
+				<div class="product-type">
+					<?php foreach($terms as $term) : ?>
+						<p><a href="<?php echo get_term_link($term); ?>">
+						<?php echo $term->name ?>
+					</a>
+					</p>
+
+					<?php endforeach; ?>
+					<?php endif; ?>
+				</div>
 			</header><!-- .page-header -->
 
 			
