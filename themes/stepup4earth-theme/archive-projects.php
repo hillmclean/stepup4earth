@@ -10,6 +10,18 @@ get_header(); ?>
 <div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+		<?php
+				    $args = array( 
+					'post_type'       => 'page', 
+					'posts_per_page'  => 1,
+					'name'           => 'projects',
+				    );
+				    $projects_page = get_posts( $args ); // returns an array of posts
+				
+				?>
+				<h2><?php echo  $projects_page[0]->post_title; ?></h2>
+				<h3><?php echo  $projects_page[0]->post_content; ?></h3>
+
 		
 			<?php /* Start the Loop */ ?>
 			
