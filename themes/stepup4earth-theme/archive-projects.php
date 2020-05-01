@@ -36,7 +36,7 @@ get_header(); ?>
 			<?php
 			    $args = array( 
 				'post_type'       => 'projects', 
-				'posts_per_page'  => 3,
+				'posts_per_page'  => 2,
 				'orderby'         => 'date',
 				'order'           => 'ASC',
 			    );
@@ -45,7 +45,7 @@ get_header(); ?>
 			<?php foreach ( $products_post as $post ) : setup_postdata( $post ); ?>
 			<?php include( locate_template( 'template-parts/content-projects.php', false) ); ?>
 			<?php endforeach ; ?>
-			<?php the_posts_navigation(); ?>
+		
 
 			
 		<?php endif; ?>

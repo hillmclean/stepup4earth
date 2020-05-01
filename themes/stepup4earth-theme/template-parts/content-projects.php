@@ -21,7 +21,7 @@
 
 	<div class="entry-content">
 		<?php the_excerpt(); ?>
-		<a class="volunteer-button" href="<?php echo get_permalink( get_page_by_path( 'volunteer' ) ); ?>">Volunteer</a>
+		<a class="more-button"" href="<?php the_permalink(); ?>">Read More</a>
     </div><!-- .entry-content -->
     <div class="light-green-box"></div>
     <div class="dark-green-box"></div>
