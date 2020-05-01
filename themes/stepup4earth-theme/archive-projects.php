@@ -10,47 +10,63 @@ get_header(); ?>
 <div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
-
-			<?php
-			    $args = array( 
-				'post_type'       => 'page', 
-				'posts_per_page'  => 1,
-				'name'           => 'projects',
-			    );
-			    $projects_page = get_posts( $args ); // returns an array of posts
-			
-			?>
-			<div class='workshops-container'>
-			<?php foreach ( $projects_page as $post ) : setup_postdata( $post ); ?>
-				<header class="page-header-content">
-					<div class="projects-page-content">
-						<h2><?php the_title(); ?></h2>
-						<?php the_content(); ?>
-				    </div>
-			</header><!-- .page-header -->
-			<?php endforeach; wp_reset_postdata(); ?>   
-			</div>
+		
 			<?php /* Start the Loop */ ?>
 			
 			<?php
+			$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 			    $args = array( 
 				'post_type'       => 'projects', 
-				'posts_per_page'  => 2,
+				'posts_per_page'  => 3,
 				'orderby'         => 'date',
 				'order'           => 'ASC',
+				'paged' => $paged
 			    );
-			    $products_post = get_posts( $args ); // returns an array of posts
+			    $products_post = new WP_Query($args);
 			?>
-			<?php foreach ( $products_post as $post ) : setup_postdata( $post ); ?>
-			<?php include( locate_template( 'template-parts/content-projects.php', false) ); ?>
-			<?php endforeach ; ?>
-		
-
-			
-		<?php endif; ?>
-
+				<?php if (  $products_post->have_posts() ) : ?>
+	 				<?php while (  $products_post->have_posts() ) :  $products_post->the_post(); ?>
 					
+					 <article id="post-<?php the_ID(); ?>" <?php post_class('projects-article'); ?>>
+
+						<div class="projects-title-image" style="background: url('<?php the_field('image_1') ?>') no-repeat; background-size: cover; background-position: center;"></div>
+						<div class="projects-secondary-image" style="background-image: url(<?php echo get_field("image_2") ?>)"></div>
+
+						<header class="entry-header">
+						<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+						</header><!-- .entry-header -->
+						
+						<div class="workshop-secondary-image" style="background-image: url(<?php echo get_field("secondary_image") ?>)">
+						</div>
+
+						<div class="entry-content">
+							<?php the_excerpt(); ?>
+							<a class="more-button"" href="<?php the_permalink(); ?>">Read More</a>
+						</div><!-- .entry-content -->
+						<div class="light-green-box"></div>
+						<div class="dark-green-box"></div>
+						<div class="orange-green-box"></div>
+						<div class="green-line"></div>
+						</div><!-- .entry-content -->
+					</article><!-- #post-## -->
+				<?php endwhile; ?>
+				<?php endif;?>
+				
+				
+				<nav class="pagination">
+					<?php
+					$big = 999999999;
+					echo paginate_links( array(
+						'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+						'format' => '?paged=%#%',
+						'current' => max( 1, get_query_var('paged') ),
+						'total' => $products_post->max_num_pages,
+						'prev_text' => '&laquo;',
+						'next_text' => '&raquo;'
+					) );
+				?>
+				</nav>
+			<?php wp_reset_postdata(); ?>	
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
