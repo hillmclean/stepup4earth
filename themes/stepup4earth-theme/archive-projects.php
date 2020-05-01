@@ -41,7 +41,7 @@ get_header(); ?>
 
 						<div class="entry-content">
 							<?php the_excerpt(); ?>
-							<a class="more-button"" href="<?php the_permalink(); ?>">Read More</a>
+							<a class="cta-button"" href="<?php the_permalink(); ?>">Read More</a>
 						</div><!-- .entry-content -->
 						<div class="light-green-box"></div>
 						<div class="dark-green-box"></div>

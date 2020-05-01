@@ -23,6 +23,9 @@
    }
    .menu-footer-menu-container {
      width: 98%;
+     a {
+       font-family: $font__main;
+     }
    }
    .menu {
     display: flex;
