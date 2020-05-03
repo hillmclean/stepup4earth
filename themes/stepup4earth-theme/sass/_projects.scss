@@ -20,10 +20,10 @@
         }
 }
 .title-flex {
-    height: 30rem;
     display: flex;
     justify-content: flex-end;
     padding: 1rem;
+    position: relative;
 
 }
 .projects-title-container {
@@ -37,16 +37,6 @@
     h2 {
         z-index: 5;
         font-size: 2.25rem;
-        position: relative;
-        .project-title-box {
-            position: absolute;
-            width: 10rem;
-            height: 10rem;
-            z-index: -1;
-            background-color: #ffb28f;
-            top: -30px;
-            left: 190px;
-        }
     }
     p {
         margin: 0px;
@@ -54,12 +44,23 @@
     }
  }
 
+ .project-title-box {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    z-index: 1;
+    background-color: #ffb28f;
+    top: 20px;
+    left: 204px;
+}
+
 .projects-article{
     display: grid;
     grid-template-columns: repeat(3, 1fr) ;
     grid-template-rows: repeat(3, auto) .6rem repeat(6, auto);
     grid-column-gap: 4%;
     position: relative;
+    padding-top: 3rem;
     @include desktop {
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(4, auto) .6rem repeat(5, auto);

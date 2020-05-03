@@ -20,10 +20,11 @@ get_header(); ?>
 		<div class="title-flex">
 			<div class="projects-title-container">
 				<h2><?php echo  $projects_page[0]->post_title; ?>
-				<div class="project-title-box"></div>
 				</h2>
 				<?php echo  $projects_page[0]->post_content; ?>
 			</div>
+			<div class="project-title-box"></div>
+
 		</div>
 
 		
@@ -46,7 +47,7 @@ get_header(); ?>
 					 <article id="post-<?php the_ID(); ?>" <?php post_class('projects-article'); ?>>
 
 					 <div class="background-green-box"></div>
-	<div class="background-grey-box"></div>
+					<div class="background-grey-box"></div>
 
 						<div class="projects-title-image" style="background: url('<?php the_field('image_1') ?>') no-repeat; background-size: cover; background-position: center;"></div>
 
