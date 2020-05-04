@@ -54,23 +54,23 @@
     position: absolute;
     width: 10rem;
     height: 10rem;
-    z-index: 2;
+    z-index: -1;
     background-color: $color__mint-1;
-    top: 20px;
-    left: 204px;
+    top: -30px;
+    left: 190px;
     @include desktop {
         top: -10px;
-    left: 324px;
+        left: 324px;
     }
 }
 .project-title-box2 {
     position: absolute;
     width: 4rem;
     height: 4rem;
-    z-index: 2;
+    z-index: -1;
     background-color: $color__green-light-1;
-    top: 120px;
-    left: 184px;
+    top: 90px;
+    left: 180px;
     @include tablet {
         top: 116px;
         left: 375px;
