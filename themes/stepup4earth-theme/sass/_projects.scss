@@ -1,7 +1,8 @@
 
 	.projects-main {
-	  
-	    // Other styles
+      max-width: 1440px;
+      margin: 0 auto;
+	 
 	    .page-header {
 		display: grid;
 		grid-template-columns: 1fr 6fr 5fr;
@@ -72,8 +73,8 @@
     top: 90px;
     left: 180px;
     @include tablet {
-        top: 116px;
-        left: 375px;
+        top: 66px;
+        left: 365px;
     }
     @include desktop {
         top: 86px;
