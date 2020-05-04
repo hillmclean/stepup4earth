@@ -23,7 +23,7 @@
     display: flex;
     justify-content: flex-end;
     padding: 1rem;
-    position: relative;
+    // position: relative;
 
 }
 .projects-title-container {
@@ -41,6 +41,7 @@
         z-index: 5;
         font-size: 2.25rem;
         width: 19rem;
+        position: relative;
     }
     p {
         margin: 0px;
@@ -58,8 +59,8 @@
     top: 20px;
     left: 204px;
     @include desktop {
-        top: 20px;
-        left: 804px;
+        top: -10px;
+    left: 324px;
     }
 }
 .project-title-box2 {
@@ -75,8 +76,8 @@
         left: 375px;
     }
     @include desktop {
-        top: 116px;
-        left: 975px;
+        top: 86px;
+        left: 495px;
     }
 }
 
