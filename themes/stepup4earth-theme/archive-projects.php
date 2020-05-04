@@ -23,7 +23,8 @@ get_header(); ?>
 				</h2>
 				<?php echo  $projects_page[0]->post_content; ?>
 			</div>
-			<div class="project-title-box"></div>
+			<div class="project-title-box1"></div>
+			<div class="project-title-box2"></div>
 
 		</div>
 
@@ -79,8 +80,8 @@ get_header(); ?>
 						'format' => '?paged=%#%',
 						'current' => max( 1, get_query_var('paged') ),
 						'total' => $products_post->max_num_pages,
-						'prev_text' => '&laquo;',
-						'next_text' => '&raquo;'
+						'prev_text' => '',
+						'next_text' => ''
 					) );
 				?>
 				</nav>
