@@ -38,15 +38,13 @@ get_header(); ?>
 
 			<div class="shop-header-box" ></div>
 
-			<section class="shop-des-mobile">
+		</header>
+
+		<section class="shop-des-mobile">
 				<div class="shop-des"><?php the_content(); ?></div>
 		</section> <!-- .our-mission-mobile -->
 
 		<?php endforeach; wp_reset_postdata(); ?>  
-
-		</header>
-
-
 
 			<?php $terms = get_terms( array(
 					'taxonomy'=>'product_category',
@@ -55,6 +53,7 @@ get_header(); ?>
 				if (! empty($terms) && ! is_wp_error($terms)) :
 				?>
 				
+				<h2 class="product-type-title">Categories</h2>
 				<div class="product-type">
 					<?php foreach($terms as $term) : ?>
 						<p>
@@ -106,6 +105,7 @@ $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 		<?php endwhile; ?>
 		<?php endif;?>
 
+		<div class="shop-grid-box" ></div>
 	
 	</div> <!-- .product-grid -->
 
