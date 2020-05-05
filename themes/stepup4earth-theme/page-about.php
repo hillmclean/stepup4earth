@@ -18,7 +18,7 @@ get_header(); ?>
 				<div class="top-image1" ></div>
 				
 				<div class="top-image2" ></div>
-				
+				 
 				<div class="about-title-box">
 					<div class="our-mission-dkp"><?php the_content(); ?></div>
 					<h1 class="our-mission-header-mobile"><?php the_title(); ?></h1>

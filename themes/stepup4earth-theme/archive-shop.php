@@ -10,12 +10,45 @@ get_header(); ?>
 	<div class="background-grey-box"></div>
 	<div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
+	
+		<?php
+			    $args = array( 
+				'post_type'       => 'page', 
+				'posts_per_page'  => 1,
+				'name'           => 'shop',
+			    );
+			    $shop_page = get_posts( $args ); // returns an array of posts
+			
+			?>
+
+		<header class="shop-header">												
+			<div class="top-image1" ></div>
+				
+			<div class="top-image2" ></div>
+				
+				<?php foreach ( $shop_page as $post ) : setup_postdata( $post ); ?>
+						<div class="shop-title-box">
+							<h1 class="shop-title-mobile"><?php the_title(); ?></h1>
+							<div class="shop-title-dkp"><?php the_content(); ?></div>
+						</div> 
+
+			<div class="top-image3" ></div>
+
+			<div class="top-image4" ></div>	
+
+			<div class="shop-header-box" ></div>
+
+			<section class="shop-des-mobile">
+				<div class="shop-des"><?php the_content(); ?></div>
+		</section> <!-- .our-mission-mobile -->
+
+		<?php endforeach; wp_reset_postdata(); ?>  
+
+		</header>
 
 
-		<header class="shop-header">
-				<h1 class="shop-header-text">Shop</h1>
 
-				<?php $terms = get_terms( array(
+			<?php $terms = get_terms( array(
 					'taxonomy'=>'product_category',
 					'hide_empty' => 0,
 				));
@@ -32,8 +65,6 @@ get_header(); ?>
 					<?php endforeach; ?>
 					<?php endif; ?>
 				</div>
-
-			</header>
 
 
 <!-- Product Grid -->
@@ -60,8 +91,8 @@ $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 		
 			<div class="product-item">
 			<?php if( get_field('image_link') ): ?>
-				<a href="<?php the_field('link'); ?>">
-					<div class="product-img-box" style="background: url('<?php echo the_field('image_link'); ?>') no-repeat; background-size: contain; background-position: center;" >
+				<a href="<?php the_field('link'); ?>" target="_blank">
+					<div class="product-img-box" style="background: url('<?php echo the_field('image_link'); ?>') no-repeat; background-size: cover; background-position: center;" >
 					<?php endif; ?>	
 					</div> 
 				</a>
@@ -75,7 +106,10 @@ $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 		<?php endwhile; ?>
 		<?php endif;?>
 
-			<nav class="pagination">
+	
+	</div> <!-- .product-grid -->
+
+	<nav class="pagination">
 				<?php
 				$big = 999999999;
 				echo paginate_links( array(
@@ -83,15 +117,12 @@ $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 					'format' => '?paged=%#%',
 					'current' => max( 1, get_query_var('paged') ),
 					'total' => $products->max_num_pages,
-					'prev_text' => '&laquo;',
-					'next_text' => '&raquo;'
+					'prev_text' => '',
+					'next_text' => ''
 				) );
 				?>
 			</nav>
 <?php wp_reset_postdata(); ?>
-
-	
-	</div> <!-- .product-grid -->
 
 </main><!-- #main -->
 </div><!-- #primary -->
