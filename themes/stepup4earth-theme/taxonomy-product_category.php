@@ -10,11 +10,11 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<header class="shop-header">
+		<header class="shop-tax-header">
 			<h1><?php get_the_archive_title()?></h1>
 			<div class="taxonomy-description"><?php the_archive_description() ?>
 			</div>
-
+			<div class="tax-header-box" ></div>
 
 			<?php $terms = get_terms( array(
 					'taxonomy'=>'product_category',
@@ -32,6 +32,7 @@ get_header(); ?>
 
 					<?php endforeach; ?>
 					<?php endif; ?>
+					<div class="tax-grid-box" ></div>
 				</div>
 			</header><!-- .page-header -->
 
@@ -60,7 +61,7 @@ get_header(); ?>
 		 
 			<div class="product-item">
 				<?php if( get_field('image_link') ): ?>
-					<a href="<?php the_permalink()?>" <?php the_title(); ?>>
+					<a href="<?php the_field('link'); ?>" target="_blank">
 						<div class="product-img-box" style="background: url('<?php echo the_field('image_link'); ?>') no-repeat; background-size: cover;" >
 				<?php endif; ?>	
 						</div> 
@@ -68,15 +69,17 @@ get_header(); ?>
 
 				<div class="product-info-box">
 					<p class="product-title"><?php the_title(); ?></p>
-					<p class="product-price">$ <?php the_field('price'); ?></p>
-				</div> 
+					<p class="product-retailer"><?php the_field('seller'); ?></p>				</div> 
 
 			</div> <!-- .product-item -->
 
 			<?php endwhile; ?>
 		<?php endif;?>
 
-		<nav class="pagination">
+	
+	</div> <!-- .product-grid -->
+
+	<nav class="pagination">
 			<?php
 			$big = 999999999;
 			echo paginate_links( array(
@@ -90,9 +93,6 @@ get_header(); ?>
 			?>
 		</nav>
 	<?php wp_reset_postdata(); ?>
-
-	
-	</div> <!-- .product-grid -->
 
 
 		</main><!-- #main -->
