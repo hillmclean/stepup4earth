@@ -93,7 +93,7 @@ $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 			<div class="product-item">
 			<?php if( get_field('image_link') ): ?>
 				<a href="<?php the_field('link'); ?>" target="_blank">
-					<div class="product-img-box" style="background: url('<?php echo the_field('image_link'); ?>') no-repeat; background-size: cover; background-position: center;" >
+					<div class="product-img-box" style="background: url('<?php echo the_field('image_link'); ?>') no-repeat; background-size: contain; background-position: center;" >
 					<?php endif; ?>	
 					</div> 
 				</a>
