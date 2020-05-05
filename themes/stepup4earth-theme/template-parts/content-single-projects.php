@@ -7,7 +7,10 @@
 
 ?>
 
-<article class="single-post-main" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article class="single-project-main" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+<div class="single-page-bkgd-box">
+
 	<header class="entry-header-res-single">
 
 	<?php if( get_field('image_1') ): ?>
@@ -27,7 +30,7 @@
 			</div><!-- .entry-meta -->
 			<?php endif; ?>
 	</header><!-- .entry-header -->
-
+	</div>
 	
 	
 	<div class="entry-content">
