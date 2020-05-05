@@ -77,11 +77,12 @@
   position: absolute;
   z-index: 0;
   width: 100%;
-  height: 25rem;
+  height: 32rem;
   background-color: #f4f0ed;
   top: 210px;
   @include tablet {
-    top: 314px;
+    top: 268px;
+    height: 29rem;
   }
   @include desktop {
     margin-top: 0rem;
@@ -110,13 +111,23 @@
     display: none;
     @include tablet {
       display: grid;
+      text-align: center;
+      z-index: 2;
+      h2 {
+        font-size: 1.25rem;
+        padding-bottom: 1rem;
+        border-bottom: 1.8px solid $color__green-1;
+        z-index: 2;
+      }
+      p {
+        z-index: 2;
+      }
     }
   }
 
   .shop-des-mobile {
-    height: 32rem;
     background-color: white;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
   }
   .shop-des{
     position: relative;
@@ -132,10 +143,10 @@
   }
 
   .shop-field {
-    padding-bottom: 5rem;
-    z-index: 2;
+    z-index: 4;
     margin: 0 auto;
     width: 95%;
+    position: relative;
   }
 
 // categories //
@@ -175,6 +186,21 @@
   text-align: center;
 }
 
+.shop-grid-box {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 35rem;
+  background-color: $color__background-green;
+  top: -5px;
+  @include desktop {
+    margin-top: 0rem;
+    top: 469px;
+}
+}
+
+// shop grid //
+
 
 .product-grid {
   display: grid;
@@ -190,22 +216,6 @@
     margin-bottom: 2rem;
     width: 100%;
     }
-  }
-
-  .shop-grid-box {
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    height: 35rem;
-    background-color: $color__background-green;
-    top: -140px;
-    @include tablet {
-      top: 314px;
-    }
-    @include desktop {
-      margin-top: 0rem;
-      top: 469px;
-  }
   }
   
   .product-item  {
