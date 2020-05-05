@@ -42,6 +42,7 @@ get_header(); ?>
 
 		<section class="shop-des-mobile">
 				<div class="shop-des"><?php the_content(); ?></div>
+				<div class="shop-field"><?php the_field('page_description'); ?></div>
 		</section> <!-- .our-mission-mobile -->
 
 		<?php endforeach; wp_reset_postdata(); ?>  
@@ -63,6 +64,7 @@ get_header(); ?>
 
 					<?php endforeach; ?>
 					<?php endif; ?>
+					<div class="shop-grid-box" ></div>
 				</div>
 
 
@@ -104,8 +106,6 @@ $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 	
 		<?php endwhile; ?>
 		<?php endif;?>
-
-		<div class="shop-grid-box" ></div>
 	
 	</div> <!-- .product-grid -->
 
