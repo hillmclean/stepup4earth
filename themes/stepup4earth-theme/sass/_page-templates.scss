@@ -84,7 +84,7 @@ Front Page
 		grid-template-columns: repeat(20, 1fr);
 		grid-template-rows: 176px  150px  176px 80px;
 		max-width: 1920px;
-		// padding-top: 10rem;
+		padding-top: 4rem;
 		padding-bottom: 0rem;
 		margin: 0 auto;
 		}
@@ -335,7 +335,7 @@ Front Page
 		grid-template-columns: repeat(20, 1fr);
 		grid-template-rows: 20rem 20rem 5rem;
 		max-width: 1920px;
-		padding-top: 5rem;
+		padding-top: 4rem;
 		padding-bottom: 0rem;
 		margin: 0 auto;
 		}
@@ -355,7 +355,7 @@ Front Page
 			}  
 		
 			@include desktop {
-				grid-column: 1 / 6;
+				grid-column: 1 / 11;
 				grid-row: 1 / 2;
 			}  
 		}
@@ -440,21 +440,7 @@ Front Page
     }  
 }
 
-.hero-img-3 {
-	display: none;
 
-	@include desktop {
-		background-image: url(../assets/images/heroimage03.png);
-		background-size: cover;
-		background-position: right;
-		grid-column: 17 / 21;
-		grid-row: 1 / 3;
-		height: 504px;
-		width: 100%;
-		margin: 0px;
-		z-index: 2;
-	}  
-}
 
 .light-green-bkgrd {
 	background-color: $color__background-green;
@@ -1518,3 +1504,21 @@ input, select, textarea {
 	}
     }
 }
+
+// Search results 
+
+.site-main-search {
+	max-width: $desktop;
+	margin: 0 auto;
+	.page-header {
+		padding-top: 4rem;
+	}
+	.page-title {
+		font-size: 3rem;;
+	}
+}
+
+// .search-page {
+// 	max-width: $desktop;
+// 	margin: 0 auto;
+// }

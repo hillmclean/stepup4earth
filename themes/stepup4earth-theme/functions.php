@@ -213,3 +213,16 @@ add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
 // 	}
 //  }
 //  add_action( 'pre_get_posts', 'wpse214084_max_post_queries' );
+
+add_action( 'pre_get_posts',  'set_posts_per_page'  );
+function set_posts_per_page( $query ) {
+
+  if ( ( ! is_admin() ) && ( $query === $GLOBALS['wp_query'] ) && ( $query->is_search() ) ) {
+    $query->set( 'posts_per_page', 10 );
+  }
+  elseif ( ( ! is_admin() ) && ( $query === $GLOBALS['wp_the_query'] ) && ( $query->is_archive() ) ) {
+    $query->set( 'posts_per_page', 1 );
+  }
+
+  return $query;
+}
