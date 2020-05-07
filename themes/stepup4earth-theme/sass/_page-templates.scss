@@ -341,7 +341,7 @@ Front Page
 		}
 
 		.front-banner-img {
-			background-image: url(../assets/images/heroimage01.jpeg);
+			background-image: url(../assets/images/fields.jpg);
 			background-size: cover;
 			background-position: right;
 			grid-column: 1 / 7;
@@ -423,12 +423,12 @@ Front Page
 	display: none;
     grid-column: 1 / 4;
     grid-row: 5 / 6;
-    background-image: url(../assets/images/heroimage02.jpeg);
+    background-image: url(../assets/images/supai-falls.jpg);
     background-size: cover;
-    background-position: right;
+    background-position: center;
     height: 351px;
     width: 100%;
-    margin: 1rem 0rem 3rem 0rem;
+    margin: 0rem;
     z-index: 1;
 
     @include desktop {
