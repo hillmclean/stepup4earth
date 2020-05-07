@@ -1512,13 +1512,45 @@ input, select, textarea {
 	margin: 0 auto;
 	.page-header {
 		padding-top: 4rem;
+		border-bottom: 1px solid $color__green-light-1;
 	}
 	.page-title {
 		font-size: 3rem;
+		text-transform: uppercase;
 	}
 }
 
-// .search-page {
-// 	max-width: $desktop;
-// 	margin: 0 auto;
-// }
+.search-page {
+	.entry-title {
+		font-size: 2rem;
+		a {
+			color: $color__green-1;
+		}
+
+	}
+	.cta-button {
+		color: black;
+		background: none;
+		border: 1px solid black;
+		width: 150px;
+		font-size: 1rem;
+		font-family: $font__main;
+	}
+	.entry-meta {
+		font-family: $font__bold;
+	}
+}
+
+.search-pagination {
+	text-align: right;
+	font-size: 1.5rem;
+	padding: 0rem 0rem 2rem 0rem;
+	.page-numbers {
+		padding: 0rem 1rem;
+		color: black;
+		font-family: $font__main;
+	}
+	.current {
+		border-bottom: 2px solid $color__green-1;
+	}
+}
