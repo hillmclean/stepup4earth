@@ -65,18 +65,6 @@ get_header(); ?>
 
 			</section> <!-- end of resource section --> 
 
-					<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-					
-					<fieldset>
-						<label>
-							<input id="search-display" type="search" class="search-field" placeholder="Search for more..." value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search for:" />
-							<button class="search-submit">
-								<i class="fa fa-search"></i>
-							</button>
-						</label>
-					</fieldset>
-				</form>
-
 				<?= custom_search_form( null, 'Search posts', 'post'); ?>
 
 		
