@@ -229,14 +229,14 @@ function set_posts_per_page( $query ) {
 
 function custom_search_form( $form, $value = "Search", $post_type = 'post' ) {
     $form_value = (isset($value)) ? $value : attribute_escape(apply_filters('the_search_query', get_search_query()));
-    $form = '<form class="search-form" method="get" id="searchform" action="' . get_option('home') . '/" >
+    $form = '<form role="search" class="search-form" method="get" value="<?php echo esc_attr( get_search_query() ); ?>" action="' . get_option('home') . '/" >
 	<fieldset>
 		<label>
-        <input type="hidden" name="post_type" value="'.$post_type.'" />
-        <input type="text" value="' . $form_value . '" name="s" id="s" />
-		<button class="search-submit">
-		<i class="fa fa-search"></i>
-	</button>
+        	<input type="hidden" name="post_type" value="'.$post_type.'" />
+        	<input placeholder="Search posts..." type="search" name="s"  id="search-display" class="search-field" title="Search for:" />
+			<button class="search-submit">
+				<i class="fa fa-search"></i>
+			</button>
 		</label>
     </fieldset>
     </form>';

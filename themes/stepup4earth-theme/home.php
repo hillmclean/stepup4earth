@@ -65,6 +65,8 @@ get_header(); ?>
 
 			</section> <!-- end of resource section --> 
 
+				
+
 				<?= custom_search_form( null, 'Search posts', 'post'); ?>
 
 		
