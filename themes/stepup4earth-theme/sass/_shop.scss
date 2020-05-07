@@ -24,9 +24,9 @@
   display: none;
   @include desktop {
   display: grid;
-  background-image: url(../assets/images/wavedesktop1.png);
+  background-image: url(../assets/images/alberta_01.jpg);
   background-size: cover;
-  background-position: right;
+  background-position: left;
   grid-row: 1 / 4; 
   grid-column: 1 / 4;
   width: 100%;
@@ -37,9 +37,9 @@
   grid-row: 1 / 4; 
   grid-column: 1 / 3;
   width: 100%;
-  background-image: url(../assets/images/wavedesktop2.png);
+  background-image: url(../assets/images/alberta_02.jpg);
   background-size: cover;
-  background-position: right;
+  background-position: left;
   z-index: 2;
   @include desktop {
     grid-row: 1 / 4; 
@@ -47,9 +47,9 @@
   }
 }
 .top-image3 {
-  background-image: url(../assets/images/wavedesktop3.png);
+  background-image: url(../assets/images/alberta_03.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: right;
   grid-row: 1 / 4; 
   grid-column: 5 / 6;
   width: 100%;
@@ -60,7 +60,7 @@
   }
 }
 .top-image4 {
-  background-image: url(../assets/images/wavedesktop4.png);
+  background-image: url(../assets/images/alberta_04.jpg);
   background-size: cover;
   background-position: right;
   grid-row: 1 / 4; 
