@@ -226,3 +226,15 @@ function set_posts_per_page( $query ) {
 
   return $query;
 }
+
+function custom_search_form( $form, $value = "Search", $post_type = 'post' ) {
+    $form_value = (isset($value)) ? $value : attribute_escape(apply_filters('the_search_query', get_search_query()));
+    $form = '<form method="get" id="searchform" action="' . get_option('home') . '/" >
+    <div>
+        <input type="hidden" name="post_type" value="'.$post_type.'" />
+        <input type="text" value="' . $form_value . '" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="'.attribute_escape(__('Search')).'" />
+    </div>
+    </form>';
+    return $form;
+}

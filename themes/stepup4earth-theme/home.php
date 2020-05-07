@@ -76,6 +76,9 @@ get_header(); ?>
 						</label>
 					</fieldset>
 				</form>
+
+				<?= custom_search_form( null, 'Search posts', 'post'); ?>
+
 		
 		</main><!-- #main -->
 	</div><!-- #primary -->

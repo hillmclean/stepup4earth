@@ -14,11 +14,12 @@
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php stepup4earth_posted_on(); ?> 
-		</div><!-- .entry-meta -->
+		</div><!-- .entry-meta
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+	</div>
+	<a class="cta-button" href="<?php the_permalink()?>">Read More →</a>
 </article><!-- #post-## -->
