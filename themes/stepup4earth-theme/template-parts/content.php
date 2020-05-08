@@ -9,9 +9,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('content-template'); ?>>
 	<header class="entry-header">
-		<?php if ( has_post_thumbnail() ) : ?>
-			<div class="archive-thumbnail"><?php the_post_thumbnail(); ?></div>
-		<?php endif; ?>
+
+	<?php if ( has_post_thumbnail() ) {
+		$postImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "full");
+		}  
+	?>
+			
+		<div class="archive-thumbnail" style="background: url('<?php echo $postImg[0]; ?>') no-repeat; background-size: cover; background-position: center;"></div>
 
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
