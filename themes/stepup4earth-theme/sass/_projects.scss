@@ -327,7 +327,7 @@
 
     .single-project-main {
         .entry-header-res-single {
-            padding: 4rem 0rem 2rem .5rem;
+            padding: 4rem 1rem 2rem 1rem;
             grid-template-rows: .3fr 1fr .5fr;
             grid-template-columns: 2fr 1fr;
             position: relative;
@@ -360,11 +360,10 @@
        }
 
 	.entry-content {
-		padding: 1rem 1rem 2rem 1rem;
+		padding: 0rem 1rem 0rem 1rem;
 		z-index: 1;
         position: relative;
-        width: 95%;
-        margin: 1rem 0rem;
+        margin: 0 auto;
         @include tablet {
             margin: 0px;
         }
@@ -387,6 +386,10 @@
 			}
 		}
     }
+}
+
+.resource-nav{
+    margin-bottom: 2rem;
 }
     
     .single-page-bkgd-box {

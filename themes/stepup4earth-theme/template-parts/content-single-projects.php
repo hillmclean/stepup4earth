@@ -9,7 +9,7 @@
 
 <article class="single-project-main" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-<div class="single-page-bkgd-box">
+<!-- <div class="single-page-bkgd-box"> -->
 
 	<header class="entry-header-res-single">
 
@@ -29,8 +29,8 @@
 				<?php stepup4earth_posted_on(); ?>
 			</div><!-- .entry-meta -->
 			<?php endif; ?>
+			</div>
 	</header><!-- .entry-header -->
-	</div>
 	
 	
 	<div class="entry-content">
