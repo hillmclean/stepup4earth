@@ -1,8 +1,6 @@
 
 	.projects-main {
-      max-width: 1440px;
-      margin: 0 auto;
-	 
+
 	    .page-header {
 		display: grid;
 		grid-template-columns: 1fr 6fr 5fr;
@@ -25,18 +23,21 @@
     justify-content: flex-end;
     padding: 7rem 1rem 1rem 1rem;
     // position: relative;
+    @include desktop {
+        display: grid;
+        grid-template-columns: repeat( 2, 1fr);
+    }
 
 }
 .projects-title-container {
     display: flex;
     flex-direction: column;
-    // @include tablet {
-    //     width: 95%;
-    // }
     @include desktop {
     height: 20rem;
     width: 35rem;
     margin-right: 1rem;
+    display: grid;
+    grid-column: 2 / 3;
     }
     h2 {
         z-index: 5;
@@ -137,27 +138,7 @@
                 height: 25rem;
             }
             }
-    .workshop-order-number {
-	grid-column: 1 / 2;
-	grid-row: 1 / 2;
-	@include desktop {
-	    grid-column: 1 / 2;
-	    grid-row: 3 / 4;
-	}
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	p {
-	    font-size: 7.5rem;
-	    text-align: center;
-	    margin: 0;
-	    font-weight: 900;
-	    @include desktop {
-		line-height: .5;
-		margin: unset;
-	    }
-	}
-    }
+   
     .entry-header {
 	grid-column: 1 / 4;
     grid-row: 2 / 3;
@@ -334,6 +315,12 @@
             @include tablet {
                 grid-template-rows: .3fr 1fr .3fr;
             }
+            @include desktop {
+                margin: 0 auto;
+                max-width: $desktop;
+                width: 100%;
+                padding: 10rem 1rem 2rem 1rem;
+            }
         .single-post-header-text {
             border-bottom: 2px solid $color__green-1;
             h1 {
@@ -343,6 +330,7 @@
         }
         .single-thumbnail {
             z-index: 2;
+            width: 100%;
         }
         .single-page-box1 {
             z-index: 2;

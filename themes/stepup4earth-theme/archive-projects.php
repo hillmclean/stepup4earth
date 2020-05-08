@@ -21,7 +21,7 @@ get_header(); ?>
 			<div class="projects-title-container">
 				<h2><?php echo  $projects_page[0]->post_title; ?>
 				<div class="project-title-box1"></div>
-			<div class="project-title-box2"></div>
+				<div class="project-title-box2"></div>
 				</h2>
 				<?php echo  $projects_page[0]->post_content; ?>
 			</div>

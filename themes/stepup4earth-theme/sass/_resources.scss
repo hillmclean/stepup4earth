@@ -213,7 +213,7 @@
 	}
 	@include desktop {
 		grid-template-columns: 2fr .8fr 0.3fr 0.3fr .8fr;
-		grid-template-rows: .3fr 1fr 1fr;
+		grid-template-rows: .3fr 1fr .5fr;
 		width: $desktop;
 		max-width: $desktop;
 		margin: 0 auto;
