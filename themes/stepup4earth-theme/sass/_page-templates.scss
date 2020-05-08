@@ -1558,3 +1558,37 @@ input, select, textarea {
 		border-bottom: 2px solid $color__green-1;
 	}
 }
+
+// Archive //
+
+.page-header-archive {
+	padding-top: 10rem;
+	border-bottom: 1px solid $color__green-light-1;
+	font-size: 3rem;
+	text-transform: uppercase;
+	font-family: $font__bold;
+	width: 95%;
+	margin: 0 auto;
+}
+
+.content-template {
+	width: 95%;
+	margin: 0 auto;
+	.entry-title {
+		font-size: 2rem;
+		a {
+			color: $color__green-1;
+		}
+	}
+	.entry-meta {
+		font-family: $font__bold;
+	}
+	.cta-button {
+		color: black;
+		background: none;
+		border: 1px solid black;
+		width: 150px;
+		font-size: 1rem;
+		font-family: $font__main;
+	}
+}

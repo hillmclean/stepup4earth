@@ -7,7 +7,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('content-template'); ?>>
 	<header class="entry-header">
 		<?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'large' ); ?>
@@ -17,12 +17,13 @@
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php stepup4earth_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php stepup4earth_posted_by(); ?>
+			<?php stepup4earth_posted_on(); ?> 
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php the_excerpt(); ?>
+		<a class="cta-button" href="<?php the_permalink()?>">Read More →</a>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
