@@ -61,24 +61,28 @@ get_header(); ?>
 				<div class="howwedo-box"></div>
 			</section> <!-- howwedo-container -->
 			
-			<section class=impact-container>
-				<div class="impact-section">
-					<?php if( have_rows('impact_section') ):?>
-						<?php while( have_rows('impact_section') ): the_row(); ?>
-								
-							<div class="impact-copy">
-								<h5 class="impact-title"><?php the_sub_field('section_title'); ?>
-								<div class="impact-box-1"></div>
-								<div class="impact-box-2"></div>
-								</h5>
-								<p><?php the_sub_field('description'); ?></p>
-							</div>
+			<?php if( have_rows('impact_section') ):?>
+				<?php while( have_rows('impact_section') ): the_row(); ?>
 
-						<?php endwhile; ?>
+					<?php if( get_sub_field('description') ): ?>
+						<section class=impact-container>
+							<div class="impact-section">	
+								<div class="impact-copy">
+									<h5 class="impact-title">
+								Our Impact
+										<div class="impact-box-1"></div>
+										<div class="impact-box-2"></div>
+									</h5>
+									<p><?php the_sub_field('description'); ?></p>
+								</div>
+							</div>
+						</section> <!-- impact-container -->
 					<?php endif; ?>
-				</div>
-			</section> <!-- impact-container -->
-				
+
+				<?php endwhile; ?>
+			<?php endif; ?>
+
+			
 			<section class="our-values">
 		        <div class="values-title">
 			        <h2>Our Core Values </h2>
@@ -201,7 +205,7 @@ get_header(); ?>
 
 
 								<div class="act-cta-button">
-									<a  href="<?php echo esc_url('cta_link' ); ?>"><p><?php the_sub_field('button_text'); ?></p></a>
+									<a  href="<?php the_sub_field('cta_link' ); ?>"><p><?php the_sub_field('button_text'); ?></p></a>
 								</div>
 							</div>
 						</div> <!-- action-container -->
@@ -210,26 +214,27 @@ get_header(); ?>
 				<?php endif; ?>
 			</section> <!-- about-cta -->
 
-			<section class="partners">
-				<?php if(get_field('partner_section_')): ?>
-					<?php while(has_sub_field('partner_section_')): ?>
-						<h5><?php the_sub_field('title_for_parter_section'); ?></h5>
 
-						<?php if(have_rows('partner_logos')): ?>
-							<div class="partner-logos">
-								<?php while(have_rows('partner_logos')): the_row(); ?>
-								<div class="logo-image" style="background: url(<?php  echo the_sub_field('image'); ?>); background-size: cover; background-position: center;"></div> 
-								<?php endwhile; ?>
-							</div>
-						<?php endif; ?>
+			<?php if(get_field('partner_section_')): ?>
+				<?php while(has_sub_field('partner_section_')): ?>
+					<section class="su4e-partner-section">
+						<h5 class="partner-title"><?php the_sub_field('title_for_parter_section'); ?></h5>
 
+				<div class="partners-container">
+				<?php if( have_rows('partner_logos') ):?>
+					<?php while( have_rows('partner_logos') ): the_row(); ?>
+					<?php if( get_sub_field('image') ): ?>
+							<div class="logo-image" style="background: url(<?php  echo the_sub_field('image'); ?>); background-size: cover; background-position: center;"></div> 
+					<?php endif; ?>
 					<?php endwhile; ?>
 				<?php endif; ?>
+				</div>
+					</section>
+
+				<?php endwhile; ?>
+			<?php endif; ?>
 
 
-
-
-				</section> <!-- end of host section -->
 
 				<section class="top-return">
 					<p>Back to top</p>

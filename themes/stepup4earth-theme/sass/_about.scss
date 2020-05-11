@@ -912,12 +912,9 @@
   
 // PARTNERS //
 
-.partners {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.su4e-partner-section {
   border-top: 1px solid #b8b8b8;
+  text-align: center;
   padding-top: 3rem;
   h5 {
     margin: 0px;
@@ -931,6 +928,15 @@
       font-size: 2rem;
     }
   }
+}
+
+.partners-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .partner-logos {
