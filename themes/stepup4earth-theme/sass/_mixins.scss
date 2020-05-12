@@ -18,6 +18,12 @@
   }
 }
 
+@mixin iphone {
+	@media screen and (min-width: $iphone) {
+	  @content;
+	}
+  }
+
 
 // Center block
 @mixin center-block {

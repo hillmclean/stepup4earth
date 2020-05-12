@@ -506,7 +506,7 @@
             }
           .founder-name {
             position: absolute;
-            width: 10rem;
+            width: 6rem;
             top: 70px;
             left: 200px;
             @include desktop {
@@ -548,10 +548,13 @@
       position: absolute;
       z-index: -1;
       background-color: $color__background-green;
-      width: 23rem;
+      width: 19rem;
       height: 12rem;
       top: 50px;
       left: -7px;
+      @include iphone {
+        width: 23rem; 
+      }
       @include desktop {
         width: 60rem;
         height: 20rem;
@@ -609,9 +612,9 @@
             }
           .founder-name {
             position: absolute;
-            width: 10rem;
+            width: 6rem;
             top: 70px;
-            left: -180px;
+            left: -100px;
             @include desktop {
               top: -10px;
               left: -230px;
@@ -712,7 +715,7 @@
             }
           .founder-name {
             position: absolute;
-            width: 10rem;
+            width: 6rem;
             top: 70px;
             left: 200px;
             @include desktop {
@@ -753,10 +756,13 @@
       position: absolute;
       z-index: -1;
       background-color:  $color__background-green;
-      width: 23rem;
+      width: 19rem;
       height: 16rem;
       top: 95px;
       left: -7px;
+      @include iphone {
+        width: 23rem; 
+      }
       @include desktop {
         width: 60rem;
         height: 20rem;
@@ -802,6 +808,7 @@
     height: 40rem;
     max-width: $desktop;
     margin: 0 auto;
+    margin-bottom: 3rem;
   }
 
   .action-image1 {
