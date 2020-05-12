@@ -121,10 +121,12 @@
     top: 251px;
     @include tablet {
       top: 314px;
+      height: 50rem;
     }
     @include desktop {
       margin-top: 0rem;
       top: 469px;
+      height: 70rem;
   }
 }
 
@@ -509,6 +511,9 @@
             width: 6rem;
             top: 70px;
             left: 200px;
+            @include iphone {
+              width: 10rem;
+            }
             @include desktop {
               width: 20rem;
               top: -45px;
@@ -536,6 +541,7 @@
       left: 176px;
       width: 2rem;
       height: 2rem;
+      z-index: 10;
       @include desktop {
         width: 4rem;
         height: 4rem;
@@ -615,6 +621,10 @@
             width: 6rem;
             top: 70px;
             left: -100px;
+            @include iphone {
+              width: 10rem;
+              left: -140px;
+            }
             @include desktop {
               top: -10px;
               left: -230px;
@@ -718,6 +728,9 @@
             width: 6rem;
             top: 70px;
             left: 200px;
+            @include iphone {
+              width: 10rem;
+            }
             @include desktop {
               width: 20rem;
               top: -40px;
