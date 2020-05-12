@@ -149,9 +149,16 @@
   }
   .rights-reserved {
    text-align: center;
+   position: relative;
+   z-index: 99;
    @include desktop {
-    text-align: center;
    }
 
   }
+}
+
+.rights-reserved {
+  text-align: left;
+  position: relative;
+  z-index: 99;
 }

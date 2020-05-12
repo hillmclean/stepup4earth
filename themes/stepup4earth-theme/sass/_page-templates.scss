@@ -22,13 +22,15 @@ Front Page
 	padding: 0.5rem 0rem 0.5rem 0rem;
 	z-index: 2;
 	width: 100%;
+	align-self: center;
 
   @include tablet {
 	grid-column: 5 / 12;
-	grid-row: 2 / 4;
+	grid-row: 2 / 3;
   }
   @include tablet {
 	grid-column: 5 / 10;
+	align-self: flex-start;
   }
 
   .site-title-heading  {
@@ -45,6 +47,7 @@ Front Page
 	}
 .tagline-box {
 	position: relative;
+	padding-right: 0.5rem;
 	}
 .site-info-li {
 	border-top: $line_green;
@@ -64,7 +67,7 @@ Front Page
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 0;
-	grid-template-rows: 7vh 12vh 25vh 35vh 40vh 10vh;
+	grid-template-rows: 7vh 12vh 25vh 46vh 40vh 10vh;
 	justify-self: right;
 	padding-top: 4rem;
 	padding-bottom: 2.5rem;
@@ -157,7 +160,7 @@ Front Page
 	.light-green-bkgrd {
 		background-color: $color__background-green;
 		width: 100%;
-		height: 1100px;
+		height: 1000px;
 		grid-column: 3 / 4;
 		grid-row: 1 / 6;
 		position: absolute;
@@ -187,9 +190,9 @@ Front Page
 		margin-right: 1rem;
 		z-index: 1;
 	
-		@include tablet {
-			display: none;
-		}  
+		// @include tablet {
+		// 	display: none;
+		// }  
 	
 		@include desktop {
 			display: grid;
