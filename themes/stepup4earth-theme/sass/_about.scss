@@ -487,10 +487,17 @@
     .section-title {
       font-size: 1.5rem;
       margin-top: 0rem;
+      @include desktop {
+        font-size: 2.25rem;
+      }
     }
     .founder-description {
-      margin-bottom: 3rem;
+      padding-bottom: 3rem;
       text-align: center;
+      @include desktop {
+        width: 80%;
+        margin: 0 auto;
+      }
     }
     
     p {
@@ -530,7 +537,7 @@
           }
           p {
             @include desktop {
-              font-size: 2rem;
+              font-size: 1.5rem;
             }
           }
         }
@@ -600,7 +607,7 @@
       left: -130px; 
       @include desktop {
         width: 20rem;
-        top: 130px;
+        top: 120px;
         left: -100px;
       }
     }
@@ -640,7 +647,7 @@
           }
           p {
             @include desktop {
-              font-size: 2rem;
+              font-size: 1.5rem;
               width: 20rem;
             }
           }
@@ -747,7 +754,7 @@
           }
           p {
             @include desktop {
-              font-size: 2rem;
+              font-size: 1.5rem;
               width: 20rem;
             }
           }
@@ -815,7 +822,7 @@
       left: -90px;
       @include desktop {
         width: 20rem;
-        top: 130px;
+        top: 110px;
         left: -90px;
       }
     }
