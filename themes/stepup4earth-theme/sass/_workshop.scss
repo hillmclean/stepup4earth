@@ -10,6 +10,11 @@
 		    grid-column: 3 / 4;
 		    grid-row: 1 / 2;
 		}
+		.carousel-pagination-numbers {
+			a {
+			font-family: $font__main;
+			}
+		}
 		.carousel-pagination-buttons {
 		    margin-top: 1rem;
 		    .carousel-pagination-prev,
