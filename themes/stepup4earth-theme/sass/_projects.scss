@@ -54,12 +54,16 @@
 
  .project-title-box1 {
     position: absolute;
-    width: 10rem;
-    height: 10rem;
     z-index: -1;
-    background-color: $color__mint-1;
+    background-color: $color__green-4;
     top: -30px;
     left: 190px;
+    width: 8rem;
+    height: 8rem;
+    @include iphone {
+        width: 10rem;
+        height: 10rem;
+    }
     @include desktop {
         top: -10px;
         left: 324px;
@@ -70,9 +74,12 @@
     width: 4rem;
     height: 4rem;
     z-index: -1;
-    background-color: $color__green-light-1;
-    top: 90px;
+    background-color: $color__orange-4;
+    top: 60px;
     left: 180px;
+    @include iphone {
+        top: 90px;
+    }
     @include tablet {
         top: 66px;
         left: 365px;
