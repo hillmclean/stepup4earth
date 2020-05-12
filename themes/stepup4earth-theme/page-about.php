@@ -125,6 +125,14 @@ get_header(); ?>
 			</section> <!-- our-values -->
 				
 			<section class="founders">
+
+			<?php if(get_field('founders_section_title')): ?>
+				<div class="founder-description">
+					<h2 class="section-title"><?php the_field('founders_section_title'); ?></h2>
+					<p><?php the_field('founders_description'); ?></p>
+				</div>
+			<?php endif; ?>
+
 				<?php if( have_rows('founder1') ):?>
 					<?php while( have_rows('founder1') ): the_row(); ?>
 								
