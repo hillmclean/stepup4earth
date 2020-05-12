@@ -42,7 +42,6 @@
   background-position: left;
   z-index: 2;
   @include desktop {
-    grid-row: 1 / 4; 
     grid-column: 4 / 10;
   }
 }
@@ -55,7 +54,6 @@
   width: 100%;
   z-index: 2;
   @include desktop {
-    grid-row: 1 / 4; 
     grid-column: 16 / 18;
   }
 }
@@ -68,7 +66,6 @@
   width: 100%;
   z-index: 2;
   @include desktop {
-    grid-row: 1 / 4; 
     grid-column: 18 / 21;
   }
 }
@@ -79,7 +76,6 @@
   grid-column: 3 / 5;
   position: relative;
     @include desktop {
-      grid-row: 2 / 3; 
       grid-column: 10 / 16;
     }
   }
@@ -198,7 +194,6 @@
   width: 98%;
     @include desktop {
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
     padding: 0px;
     margin-bottom: 2rem;
     width: 100%;
@@ -280,14 +275,8 @@
     background-color: #f4f0ed;
     top: 0px;
     @include tablet {
-      top: 0px;
       height: 29rem;
     }
-  //   @include desktop {
-  //     margin-top: 0rem;
-  //     top: 378px;
-  //     height: 40rem;
-  // }
   }
 
 .tax-grid-box {
