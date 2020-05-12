@@ -163,10 +163,13 @@
 		}
 	}
 	.entry-meta {
-		border-bottom: 2px solid $color__green-1;
-		width: 20rem;
+		width: 95%;
 		padding-bottom: 1rem;
 		font-size: 1.5rem;
+		border-bottom: 2px solid $color__green-1;
+		@include iphone {
+		width: 20rem;
+		}
 	}
 	.entry-footer {
 		display: flex;
@@ -202,11 +205,14 @@
 .entry-header-res-single {
 	display: grid;
 	grid-gap: 1rem;;
-	grid-template-rows: .3fr 1fr 1fr;
+	width: 100%;
+	padding: 7rem 1rem 2rem 1rem;
+	@include iphone {
+	grid-template-rows: .3fr .7fr 1fr;
 	grid-template-columns: 2fr 1fr;
-	padding: 9rem 0rem 2rem .5rem;
+	padding: 7rem 0rem 2rem .5rem;
 	width: 23rem;
-	// position: relative;
+	}
 	@include tablet {
 		grid-template-rows: .3fr 1fr 0.5fr;
 		padding: 9rem 1rem 0rem 1rem;
@@ -214,7 +220,7 @@
 	@include desktop {
 		grid-template-columns: 2fr .8fr 0.3fr 0.3fr .8fr;
 		grid-template-rows: .3fr 1fr .5fr;
-		width: $desktop;
+		width: 100%;
 		max-width: $desktop;
 		margin: 0 auto;
 	}
