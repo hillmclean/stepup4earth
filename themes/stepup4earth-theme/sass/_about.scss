@@ -27,7 +27,6 @@
       grid-column: 3 / 5;
       position: relative;
       @include desktop {
-        grid-row: 2 / 3; 
         grid-column: 10 / 16;
       }
     }
@@ -56,7 +55,6 @@
           display: none;
         }
       }
-
   
     .top-image1 {
       display: none;
@@ -80,7 +78,6 @@
       background-position: right;
       z-index: 2;
       @include desktop {
-        grid-row: 1 / 4; 
         grid-column: 4 / 10;
       }
     }
@@ -93,7 +90,6 @@
       width: 100%;
       z-index: 2;
       @include desktop {
-        grid-row: 1 / 4; 
         grid-column: 16 / 18;
       }
     }
@@ -106,7 +102,6 @@
       width: 100%;
       z-index: 2;
       @include desktop {
-        grid-row: 1 / 4; 
         grid-column: 18 / 21;
       }
     }
@@ -135,9 +130,7 @@
     z-index: 2;
     text-align: center;
     margin: 0 auto;
-    padding-left: 0.5rem;
-    padding-right: 0.4375rem;
-    padding-bottom: 3rem;
+    padding: 0rem 0.4375rem 3rem 0.5rem;
     h2{
       font-size: 1.25rem;
     }
@@ -222,8 +215,7 @@
   margin-top: 3rem;
   .impact-section {
     background-color: white;
-    z-index: 3;
-    width: 100%;
+    z-index: 3; 
     padding: 4rem 0rem;
     @include desktop {
       padding: 4.5rem 0rem 4rem 0rem;
@@ -823,7 +815,6 @@
       @include desktop {
         width: 20rem;
         top: 110px;
-        left: -90px;
       }
     }
   } // end of founders
