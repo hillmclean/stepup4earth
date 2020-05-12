@@ -11,6 +11,7 @@
 		    grid-row: 1 / 2;
 		}
 		.carousel-pagination-numbers {
+			flex-wrap: wrap;
 			a {
 			font-family: $font__main;
 			}
