@@ -22,7 +22,6 @@
     display: flex;
     justify-content: flex-end;
     padding: 7rem 1rem 1rem 1rem;
-    // position: relative;
     @include desktop {
         display: grid;
         grid-template-columns: repeat( 2, 1fr);
@@ -105,7 +104,6 @@
     max-width: 1920px;
     margin: 0 auto;
     }
-        // Background boxes for all templates
 	    .background-green-box {
             grid-row: 1 / 2;
             grid-column: 1 / 3;
@@ -139,9 +137,6 @@
             grid-row: 2 / 5;
             grid-column: 1 / 13;
             @include tablet {
-                height: 25rem;
-            }
-            @include desktop {
                 height: 25rem;
             }
             }
@@ -199,8 +194,6 @@
         display: none;
         @include tablet {
             display: grid;
-            grid-column: 2 / 4;
-            grid-row: 4 / 9;
             z-index: 2;
             background-position: center;
             background-size: cover;
@@ -226,7 +219,7 @@
         padding:.5rem;
         z-index: 2;
         @include desktop {
-            grid-column: 8/13;
+            grid-column: 8 / 13;
             grid-row: 6 / 8;
         }
         .cta-button {
@@ -274,9 +267,6 @@
         width: 3rem;
         height: 3rem;
         background-color: $color__orange-1;
-        @include tablet {
-         
-        }
         @include desktop {
             display: block;
             grid-column: 4 / 5;
@@ -344,8 +334,6 @@
         }
         .single-page-box2 {
             z-index: 2;
-            // width: 20vh;
-            // height: 18vh;
         }
         .single-page-box3 {
             z-index: 2;
@@ -393,8 +381,6 @@
         height: 420px;
         z-index: 0;
         position: relative;
-        // top: -395px;
-        // left: -10px;
         @include tablet {
             top: -400px;
         }
