@@ -1,6 +1,6 @@
 # Step Up 4 Earth Theme
 
-A WordPress custom theme forked from RED Academy, forked from Underscores.
+A WordPress custom created by hilldmc (https://github.com/hillmclean), DCCA (https://github.com/DCCA) and Sofonias (https://github.com/sofonias101)
 
 ## Installation
 
