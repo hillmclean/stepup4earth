@@ -21,7 +21,7 @@
 .title-flex {
     display: flex;
     justify-content: flex-end;
-    padding: 7rem 1rem 1rem 1rem;
+    padding: 10rem 1rem 1rem 1rem;
     @include desktop {
         display: grid;
         grid-template-columns: repeat( 2, 1fr);
