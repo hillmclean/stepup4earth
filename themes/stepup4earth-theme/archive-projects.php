@@ -67,7 +67,7 @@ get_header(); ?>
 						<div class="orange-green-box"></div>
 						<div class="green-line"></div>
 						</div><!-- .entry-content -->
-					</article><!-- #post-## -->
+					</article>
 				<?php endwhile; ?>
 				<?php endif;?>
 				

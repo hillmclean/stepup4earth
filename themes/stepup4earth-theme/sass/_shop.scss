@@ -185,7 +185,7 @@
   top: -5px;
 }
 
-// shop grid //
+// shop grid /
 
 
 .product-grid {
@@ -248,13 +248,15 @@
   // taxonomy pages //
 
   .shop-tax-header {
-    padding-top: 3rem;
+    padding-top: 4.5rem;
     text-align: center;
+    padding-bottom: 1rem;
     h1 {
       font-size: 3rem;
       margin-bottom: 0px;
       position: relative;
       z-index: 2;
+      padding-bottom: 1rem;
     }
   }
 
